@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './menu.css';
 import Accordion from "@/component/Accordion";
 
@@ -11,7 +11,37 @@ const Menu = () => {
     setIsOpen(!isOpen);
   };
 
-              // className="menu-toggle"
+  useEffect(() => {
+    const menu = document.querySelector(".menu");
+    const menuToggle = document.querySelector(".menu-toggle");
+    // posso usar outra funcao para depois remover o evento
+    // futuramente se eu quiser
+    const handleClickOutside = (event) => {
+      let element = event.target;
+
+      while (element) {
+        if (element.classList.contains('menu') || element.classList.contains('menu-toggle')) {
+          return
+        }
+
+        element = element.parentElement;
+      }
+
+      console.log(element)
+
+      if ((menu && !menu.contains(event.target)) || (menuToggle && menuToggle.contains(event.target))) {
+        menu.classList.remove('open');
+        setIsOpen(false);
+      }
+    };
+
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+
+  }, [])
+
   return (
     <div className="flex items-center justify-center h-screen">
       <button
