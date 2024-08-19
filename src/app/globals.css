@@ -17,11 +17,11 @@ html, body {
     height: 100%;
 }
 
-/*:root {*/
-/*  --foreground-rgb: 0, 0, 0;*/
-/*  --background-start-rgb: 214, 219, 220;*/
-/*  --background-end-rgb: 255, 255, 255;*/
-/*}*/
+
+:root {
+    --principal-color: #444CE6;
+    --default-bg: rgb(243 244 246 / 1);
+}
 
 /*@media (prefers-color-scheme: dark) {*/
 /*  :root {*/
