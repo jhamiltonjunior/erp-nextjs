@@ -1,7 +1,7 @@
 "use client"
 
 import AuthForm from "@/component/HandleUserNotLogged";
-import './globals.css'
+import '../globals.css'
 import {usePathname} from "next/navigation";
 import RH from "@/app/sistema/rh/page";
 
@@ -16,20 +16,7 @@ export default function Home() {
 
   return (
     <>
-      {pathname === "/" && <Auth />}
-      {pathname === "/auth" && <Auth />}
-      {pathname === "/rrr" && <RH />}
+      muitos graficos bonitos
     </>
-  )
-}
-
-
-function Auth () {
-  return (
-    <main className="flex items-center pt-8 justify-center h-[100%] bg-gray-100">
-      <section className={"h-3/5"}>
-        <AuthForm/>
-      </section>
-    </main>
-  )
+    )
 }

@@ -43,7 +43,7 @@ const Menu = () => {
   }, [])
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen fixed">
       <button
         className="relative w-10 h-10 focus:outline-none menu-toggle"
         onClick={toggleMenu}

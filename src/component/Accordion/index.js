@@ -109,12 +109,29 @@ const Accordion = () => {
   return (
     <div className="max-w-lg mx-auto mt-8">
 
+      {/*<AccordionItem*/}
+      {/*  title="Dashboard"*/}
+      {/*  content={rh.map((item, i) =>*/}
+      {/*    <Link className={*/}
+      {/*      "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"*/}
+      {/*    } key={i} href={`/sistema/rh${rhLink[i]}`}>*/}
+      {/*      {item}*/}
+      {/*    </Link>*/}
+      {/*  )}*/}
+      {/*/>*/}
+
+      <Link className={
+        "menu-item-a block p-4 transform transition-transform text-slate-950 duration-500 hover:translate-x-2 hover:text-white"
+      } href={`/sistema`}>
+        Dashboard
+      </Link>
+      
       <AccordionItem
         title="RH"
         content={rh.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/rh/${rhLink[i]}`}>
+          } key={i} href={`/sistema/rh/${rhLink[i]}`}>
             {item}
           </Link>
         )}
