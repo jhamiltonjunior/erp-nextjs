@@ -72,22 +72,21 @@ const Accordion = () => {
   return (
     <div className="max-w-lg mx-auto mt-8">
 
-          <AccordionItem
-            title="RH"
-            content={rh.map((item, i) => <p>{item}</p>)}
-          />
-        )
+      <AccordionItem
+        title="RH"
+        content={rh.map((item, i) => <p key={i}>{item}</p>)}
+      />
       <AccordionItem
         title="Estoque"
-        content={estoque.map((item, i) => <p>{item}</p>)}
+        content={estoque.map((item, i) => <p key={i}>{item}</p>)}
       />
       <AccordionItem
         title="Financeiro"
-        content={financeiro.map((item, i) => <p>{item}</p>)}
+        content={financeiro.map((item, i) => <p key={i}>{item}</p>)}
       />
       <AccordionItem
         title="Vendas"
-        content={vendas.map((item, i) => <p>{item}</p>)}
+        content={vendas.map((item, i) => <p key={i}>{item}</p>)}
       />
     </div>
   );

@@ -14,7 +14,7 @@ const AuthForm = () => {
 
   return (
     <section className="h-[100%] flex items-center justify-center rounded-lg">
-      <div className="shadow-id w-[395px] max-w-screen p-8 rounded-lg w-full max-w-md shadow-lg bg-white">
+      <div className="shadow-id w-[395px] max-w-screen p-8 rounded-lg max-w-full shadow-lg bg-white">
         <h2 className="text-2xl font-bol mb-8 text-center">
           {isRegistering ? 'Registrar-se' : 'Login'}
         </h2>
