@@ -35,6 +35,7 @@ const AccordionItem = ({ title, content }) => {
 
 const Accordion = () => {
   const rh = [
+    "Painel",
     "Seleção",
     "Recrutamento",
     "Treinamentos",
@@ -43,6 +44,7 @@ const Accordion = () => {
     "Coordenar a contratação"
   ];
   const rhLink = [
+    "",
     "selecao",
     "recrutamento",
     "treinamentos",

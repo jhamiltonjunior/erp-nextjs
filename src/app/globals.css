@@ -22,6 +22,7 @@ html, body {
     --principal-color: #444CE6;
     --principal-color-rgb: 68, 76, 230;
     --default-bg: rgb(243 244 246 / 1);
+    --default-bg-dark: #F4F4F4;
     --principal-opacity: .8;
 }
 

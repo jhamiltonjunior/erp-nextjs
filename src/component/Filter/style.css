@@ -1,0 +1,11 @@
+input {
+    outline: none;
+
+    border: 1px solid lightgray;
+
+    /*margin: 1rem 0;*/
+
+}
+input:focus {
+    border: 1px solid #444CE6;
+}
