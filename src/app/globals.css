@@ -20,7 +20,9 @@ html, body {
 
 :root {
     --principal-color: #444CE6;
+    --principal-color-rgb: 68, 76, 230;
     --default-bg: rgb(243 244 246 / 1);
+    --principal-opacity: .8;
 }
 
 /*@media (prefers-color-scheme: dark) {*/

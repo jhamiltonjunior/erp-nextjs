@@ -1,0 +1,19 @@
+.menu-item-a:hover {
+    background-color: rgba(var(--principal-color-rgb), var(--principal-opacity));
+    transition: background-color 0.3s;
+}
+
+.menu-item-a::before {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 2px;
+     background-color: var(--principal-color);
+     transition: width 0.3s;
+ }
+
+.menu-item-a:hover::before {
+    width: 100%;
+}
