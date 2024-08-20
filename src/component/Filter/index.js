@@ -3,7 +3,7 @@ import './style.css'
 import SelectCustom from "@/component/SelectCustom";
 
 export default function Filter(props) {
-  const classNameInput = "border p-0.5 focus:border-[var(--principal-color) focus:outline-none]"
+  const classNameInput = "border p-0.5 rounded px-2 focus:border-[var(--principal-color) focus:outline-none]"
 
   const options = [
     { value: 'chocolate', label: 'Ambev' },
@@ -31,9 +31,9 @@ export default function Filter(props) {
       <input type={"date"} className={classNameInput}/>
       <input type={"date"} className={classNameInput}/>
 
-      <SelectCustom className={"h-full"} placeholder={"Todas empresas"} options={options} isMulti />
-      <SelectCustom className={"vazio"} placeholder={"Todas as areas"} options={optionsC} isMulti />
-      <SelectCustom className={"vazio"} placeholder={"Ordem"} options={optionsArrow} isClearable />
+      <SelectCustom className={"h-full max-w-[178px] min-w-[178px]"} placeholder={"Todas empresas"} options={options} isMulti />
+      <SelectCustom className={"h-full max-w-[175px] min-w-[178px]"} placeholder={"Todas as areas"} options={optionsC} isMulti />
+      <SelectCustom className={"h-full max-w-[175px] min-w-[178px]"} placeholder={"Ordem"} options={optionsArrow} isClearable />
 
     </section>
   )

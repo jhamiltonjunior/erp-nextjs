@@ -13,6 +13,7 @@ const SelectCustom = (props) => {
         options={props.options}
         isMulti={!!props.isMulti}
         isClearable={props.isClearable}
+
       />
   );
 };

@@ -4,10 +4,13 @@ export const metadata = {
   title: 'Gerenciamento de RH',
 }
 
-export default function RHPage() {
+export default function SelectionPage() {
   return (
     <main className="flex w-full min-h-screen text-center justify-center bg-[var(--default-bg-dark)] p-4">
-      rh
+      <section className={"max-w-[83rem"}>
+        <Filter className={"max-h-10"} />
+
+      </section>
     </main>
   );
 }
