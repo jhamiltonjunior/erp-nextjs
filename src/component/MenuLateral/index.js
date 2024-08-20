@@ -63,7 +63,7 @@ const Menu = () => {
           <h2 className={"text-center"}>ERP</h2>
         </section>
         <section className={""}>
-          <Accordion />
+          <Accordion state={isOpen} setState={toggleMenu} />
         </section>
       </nav>
     </div>

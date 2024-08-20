@@ -33,7 +33,7 @@ const AccordionItem = ({ title, content }) => {
   );
 };
 
-const Accordion = () => {
+const Accordion = (props) => {
   const rh = [
     "Painel",
     "Seleção",
@@ -124,7 +124,9 @@ const Accordion = () => {
 
       <Link className={
         "menu-item-a block p-4 transform transition-transform text-slate-950 duration-500 hover:translate-x-2 hover:text-white"
-      } href={`/sistema`}>
+        } href={`/sistema`}
+        onClick={() => props.setState(!props.state)}
+      >
         Dashboard
       </Link>
       
@@ -133,7 +135,8 @@ const Accordion = () => {
         content={rh.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/sistema/rh/${rhLink[i]}`}>
+          } key={i} href={`/sistema/rh/${rhLink[i]}`}
+                onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
         )}
@@ -143,7 +146,8 @@ const Accordion = () => {
         content={estoque.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/estoque/${estoqueLink[i]}`}>
+          } key={i} href={`/estoque/${estoqueLink[i]}`}
+                onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
         )}
@@ -153,7 +157,8 @@ const Accordion = () => {
         content={financeiro.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/financeiro/${financeiroLink[i]}`}>
+          } key={i} href={`/financeiro/${financeiroLink[i]}`}
+                onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
         )}
@@ -163,7 +168,8 @@ const Accordion = () => {
         content={vendas.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/vendas/${vendasLink[i]}`}>
+          } key={i} href={`/vendas/${vendasLink[i]}`}
+                onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
         )}
