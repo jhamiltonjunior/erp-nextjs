@@ -1,8 +1,8 @@
 import Filter from "@/component/Filter";
+// import {metadata} from "@/app/sistema/layout";
 
-export const metadata = {
-  title: 'Gerenciamento de RH',
-}
+// metadata.title = 'Gerenciamento de RH'
+
 
 export default function RHPage() {
   return (
