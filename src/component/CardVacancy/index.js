@@ -50,7 +50,7 @@ export default function CardVacancy() {
 
           <nav className={"flex gap-4"}>
             <SelectCustom placeholder={"Status"} options={options} defaultValue={options[0].value} />
-            <NormalButton text={'editar'} className={"bg-gray-300 p-1 px-2 max-h-[33px]"} />
+            <NormalButton text={'Editar'} className={"bg-gray-300 p-1 px-2 max-h-[33px]"} />
           </nav>
         </header>
 
