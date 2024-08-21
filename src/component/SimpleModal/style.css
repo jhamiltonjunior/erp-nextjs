@@ -21,7 +21,7 @@
 
 .modal-toggle {
     position: fixed;
-    top: 10px;
+    top: 0;
     right: 15px;
     border: none;
     cursor: pointer;
