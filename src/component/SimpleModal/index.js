@@ -22,15 +22,15 @@ const   Modal = ({isOpen, setIsOpen} ) => {
 
 
       <nav className={`shadow-ambr-500 modal-no-close absolute top-[50%] left-[50%] content-modal ${isOpen ? 'open' : 'closed'}`}>
-        <HamburguerToXButton onClick={toggleModal} isOpen={isOpen} />
+        <HamburguerToXButton onClick={toggleModal} isOpen={isOpen} classNameSpan={"span-modal"} />
         <section className={"bg-[var(--principal-color)] p-10"}>
           <h2 className={"text-center"}>ERP</h2>
         </section>
 
 
-        <section className={""}>
-          <Accordion state={isOpen} setState={toggleModal}/>
-        </section>
+        {/*<section className={""}>*/}
+        {/*  <Accordion state={isOpen} setState={toggleModal}/>*/}
+        {/*</section>*/}
       </nav>
     </>
   );
