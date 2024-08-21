@@ -2,6 +2,7 @@
 
 import Filter from "@/component/Filter";
 import {useState} from "react";
+import CardVacancy from "@/component/CardVacancy";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -13,10 +14,11 @@ export default function SelectionPage() {
 
   return (
     <main className="flex w-full min-h-screen text-center justify-center bg-[var(--default-bg-dark)] p-4">
-      <section className={"max-w-[83rem]"}>
+      <section className={"max-w-full w-[87rem] gap-6 flex flex-col items-center"}>
         <Filter className={"max-h-10"} />
 
-        fazer um componente de card para cada vaga
+        <CardVacancy />
+        <CardVacancy />
       </section>
     </main>
   );
