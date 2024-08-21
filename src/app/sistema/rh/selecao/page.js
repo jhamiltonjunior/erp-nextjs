@@ -6,6 +6,7 @@ import CardVacancy from "@/component/CardVacancy";
 import NormalButton from "@/component/NormalButton";
 import {faPlus, faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import SimpleModal from "@/component/SimpleModal";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -13,6 +14,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // }
 export default function SelectionPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
+  const [visibleModalNewVacancy, setVisibleModalNewVacancy] = useState(false);
+
 
   return (
     <main className="flex w-full min-h-screen text-center justify-center bg-[var(--default-bg-dark)] p-4">
@@ -30,13 +33,15 @@ export default function SelectionPage() {
             className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
             icon={<FontAwesomeIcon icon={faPlus} />}
             text={<p>Nova Vaga</p>}
-            onClick={() => setVisibleFilter(!visibleFilter)}/>
+            onClick={() => setVisibleModalNewVacancy(!visibleModalNewVacancy)}/>
         </section>
         {
           visibleFilter && (
             <Filter className={"max-h-10"} />
           )
         }
+
+        <SimpleModal isOpen={visibleModalNewVacancy} setIsOpen={setVisibleModalNewVacancy}  />
 
         <CardVacancy />
         <CardVacancy />
