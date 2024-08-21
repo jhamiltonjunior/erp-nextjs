@@ -7,12 +7,24 @@ const SelectCustom = (props) => {
   return (
       <Select
         placeholder={props.placeholder}
-        className={`${props.className}`}
-        defaultValue={value}
+        className={`${props.className} border-red-600`}
+        defaultValue={value || props.defaultValue}
         onChange={setValue}
         options={props.options}
         isMulti={!!props.isMulti}
         isClearable={props.isClearable}
+        classNames={{
+          // control: (state) =>
+            // state.isFocused ? 'border-red-600' : 'border-red-300',
+        }}
+
+        styles={{
+          control: (baseStyles, state) => ({
+            ...baseStyles,
+
+            // borderColor: state.isFocused ? 'border-red-600' : 'border-grey-300',
+          }),
+        }}
 
       />
   );
@@ -21,8 +33,19 @@ const SelectCustom = (props) => {
 export default SelectCustom;
 
 
-// const options = [
-//   { value: 'chocolate', label: 'Chocolate' },
-//   { value: 'strawberry', label: 'Strawberry' },
-//   { value: 'vanilla', label: 'Vanilla' },
-// ];
+// const customStyles = {
+//   control: (provided) => ({
+//     ...provided,
+//     background: 'transparent',
+//     display: 'flex',
+//     flexWrap: 'nowrap',
+//     borderColor: 'hsl(0deg 78.56% 55.56%);',
+//
+//     // width: '7em'
+//   }),
+//   menu: (provided) => ({
+//     ...provided,
+//     background: 'transparent',
+//     // width: '4em'
+//   }),
+// };

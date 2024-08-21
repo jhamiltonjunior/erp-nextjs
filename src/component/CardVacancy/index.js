@@ -5,27 +5,40 @@ import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faClock, faCircleXmark} from "@fortawesome/free-regular-svg-icons";
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import BigButtonInfo from "@/component/BigButtonInfo";
-
-
+import NormalButton from "@/component/NormalButton";
+import SelectCustom from "@/component/SelectCustom";
 
 export default function CardVacancy() {
   const [visibleFilter, setVisibleFilter] = useState(false);
 
   const info = [
     {
-      text: 'Candidatos',
-      quantity: 37,
+      text: 'Candidatos - 37',
     },
     {
-      text: 'Triagem',
-      quantity: 37,
+      text: 'Triagem - 26',
     },
     {
-      text: 'Teste Pratico',
-      quantity: 19,
+      text: 'Teste Pratico - 19',
     },
   ]
+
+  const options = [
+    {
+      value: 'publicada',
+      label: 'Publicada'
+    },
+    {
+      value: 'arquivada',
+      label: 'Arquivada'
+    },
+    {
+      value: 'congelada',
+      label: 'Congelada'
+    },
+  ]
+
+  console.log(options[0].value)
 
   return (
       <section className={"w-full bg-white p-4 shadow rounded border-b-4 border-[var(--principal-color)] grid grid-cols-1 gap-2 grid-rows-3"}>
@@ -35,13 +48,14 @@ export default function CardVacancy() {
             <h3>Empresa: Amazon</h3>
           </section>
 
-          <nav>
-            editar
+          <nav className={"flex gap-4"}>
+            <SelectCustom placeholder={"Status"} options={options} defaultValue={options[0].value} />
+            <NormalButton text={'editar'} className={"bg-gray-300 p-1 px-2 max-h-[33px]"} />
           </nav>
         </header>
 
         <main className={"flex flex-wrap flex-row gap-2.5 justify-center w-full  items-center"}>
-          <BigButtonInfo text={'Candidaturas'} quantity={56} className={"bg-green-300 txt-white"} />
+          <NormalButton text={'Candidaturas - 56'} className={"bg-green-300 p-4 txt-white"} />
           <FontAwesomeIcon icon={faArrowRight} />
 
           <section className={"flex flex-wrap flex-row gap-2.5 justify-center items-center"}>
@@ -49,14 +63,14 @@ export default function CardVacancy() {
               info.map((item, index) => {
                 return (
                 <>
-                  <BigButtonInfo {...item} key={index} />
+                  <NormalButton {...item} key={index} className={"p-4"} />
                   <FontAwesomeIcon icon={faArrowRight} />
                 </>
               )})
             }
           </section>
 
-          <BigButtonInfo text={'Contratacoes'} quantity={10} className={"bg-[var(--principal-color)] text-white"} />
+          <NormalButton text={'Contratacoes - 10'}  className={"bg-[var(--principal-color)] p-4 text-white"} />
 
         </main>
 
