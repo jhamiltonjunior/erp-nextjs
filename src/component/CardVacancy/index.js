@@ -3,8 +3,9 @@
 import Filter from "@/component/Filter";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faClock} from "@fortawesome/free-regular-svg-icons";
+import {faClock, faCircleXmark} from "@fortawesome/free-regular-svg-icons";
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import BigButtonInfo from "@/component/BigButtonInfo";
 
 
 
@@ -29,7 +30,10 @@ export default function CardVacancy() {
   return (
       <section className={"w-full bg-white p-4 shadow rounded border-b-4 border-[var(--principal-color)] grid grid-cols-1 gap-2 grid-rows-3"}>
         <header className={"flex justify-between"}>
-          <h3>Titulo da vaga</h3>
+          <section className={"flex gap-4"}>
+            <h3>Titulo da vaga</h3>
+            <h3>Empresa: Amazon</h3>
+          </section>
 
           <nav>
             editar
@@ -37,7 +41,7 @@ export default function CardVacancy() {
         </header>
 
         <main className={"flex flex-wrap flex-row gap-2.5 justify-center w-full  items-center"}>
-          <ListeInfo text={'Candidaturas'} quantity={56} className={"bg-green-300 txt-white"} />
+          <BigButtonInfo text={'Candidaturas'} quantity={56} className={"bg-green-300 txt-white"} />
           <FontAwesomeIcon icon={faArrowRight} />
 
           <section className={"flex flex-wrap flex-row gap-2.5 justify-center items-center"}>
@@ -45,14 +49,14 @@ export default function CardVacancy() {
               info.map((item, index) => {
                 return (
                 <>
-                  <ListeInfo {...item} key={index} />
+                  <BigButtonInfo {...item} key={index} />
                   <FontAwesomeIcon icon={faArrowRight} />
                 </>
               )})
             }
           </section>
 
-          <ListeInfo text={'Contratacoes'} quantity={10} className={"bg-[var(--principal-color)] text-white"} />
+          <BigButtonInfo text={'Contratacoes'} quantity={10} className={"bg-[var(--principal-color)] text-white"} />
 
         </main>
 
@@ -63,7 +67,7 @@ export default function CardVacancy() {
           </section>
 
           <section className={"flex items-center justify-start gap-1 min-w-[195px]"}>
-            <FontAwesomeIcon icon={faClock}/>
+            <FontAwesomeIcon icon={faCircleXmark}/>
             <p>Fechar com 60 candidaturas</p>
           </section>
         </footer>
@@ -72,11 +76,3 @@ export default function CardVacancy() {
   );
 }
 
-function ListeInfo(props) {
-  return (
-    <button
-      className={`${props.className} shadow p-4 flex  justify-center font-[600] transition-all duration-500 hover:scale-110`}>
-      {props.text} - {props.quantity}
-    </button>
-  )
-}
