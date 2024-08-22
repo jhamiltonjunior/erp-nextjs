@@ -14,7 +14,7 @@ import SimpleModal from "@/component/SimpleModal";
 // }
 export default function SelectionPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
-  const [visibleModalNewVacancy, setVisibleModalNewVacancy] = useState(false);
+  const [visibleModalHandleVacancy, setVisibleModalHandleVacancy] = useState(false);
 
 
   return (
@@ -33,7 +33,7 @@ export default function SelectionPage() {
             className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
             icon={<FontAwesomeIcon icon={faPlus} />}
             text={<p>Nova Vaga</p>}
-            onClick={() => setVisibleModalNewVacancy(!visibleModalNewVacancy)}/>
+            onClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)}/>
         </section>
         {
           visibleFilter && (
@@ -41,10 +41,10 @@ export default function SelectionPage() {
           )
         }
 
-        <SimpleModal isOpen={visibleModalNewVacancy} setIsOpen={setVisibleModalNewVacancy}  />
+        <SimpleModal isOpen={visibleModalHandleVacancy} setIsOpen={setVisibleModalHandleVacancy}  />
 
-        <CardVacancy />
-        <CardVacancy />
+        <CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />
+        <CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />
       </section>
     </main>
   );
