@@ -5,8 +5,8 @@ import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faClock, faCircleXmark} from "@fortawesome/free-regular-svg-icons";
 import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import NormalButton from "@/component/NormalButton";
-import SelectCustom from "@/component/SelectCustom";
+import NormalButton from "@/component/Element/NormalButton";
+import SelectCustom from "@/component/Element/SelectCustom";
 
 export default function CardVacancy(props) {
   const [visibleFilter, setVisibleFilter] = useState(false);

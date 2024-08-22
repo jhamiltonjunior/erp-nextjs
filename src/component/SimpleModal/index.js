@@ -4,10 +4,10 @@ import React from 'react';
 import './style.css';
 import HamburguerToXButton from "@/component/Element/HamburguerToXButton";
 import CustomInput from "@/component/Element/CustomInput";
-import SelectCustom from "@/component/SelectCustom";
+import SelectCustom from "src/component/Element/SelectCustom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
-import NormalButton from "@/component/NormalButton";
+import NormalButton from "src/component/Element/NormalButton";
 import Divider from "@/component/Element/Divider";
 import CustomTextArea from "@/component/Element/CustomTextArea";
 
