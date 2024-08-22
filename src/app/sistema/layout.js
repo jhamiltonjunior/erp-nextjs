@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import "../globals.css";
 import Menu from "@/component/MenuLateral";
+import "../globals.css";
 // import { Metadata } from 'next'
 //
 // export const metadata = {

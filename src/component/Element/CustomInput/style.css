@@ -1,0 +1,12 @@
+.custom-input {
+    outline: none;
+    border: none;
+
+    border-bottom: 1px solid lightgray;
+
+    /*margin: 1rem 0;*/
+
+}
+.custom-input:focus {
+    border-bottom: 1px solid #444CE6;
+}

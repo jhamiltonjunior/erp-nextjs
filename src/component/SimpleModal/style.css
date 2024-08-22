@@ -22,7 +22,7 @@
 .modal-toggle {
     position: fixed;
     top: 0;
-    right: 15px;
+    right: 0;
     border: none;
     cursor: pointer;
     z-index: 1000;

@@ -10,7 +10,7 @@ const AuthForm = () => {
     setIsRegistering(!isRegistering);
   };
 
-  const classNameInput = "w-full px-4 py-2 mb-6 "
+  const classNameInput = "w-full px-4 py-2 mb-6 handle-user-not-logged-input"
 
   return (
     <section className="h-[100%] flex items-center justify-center rounded-lg">

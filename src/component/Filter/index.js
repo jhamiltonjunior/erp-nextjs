@@ -26,10 +26,10 @@ export default function Filter(props) {
 
   return (
     <section className={`filter flex gap-3 ${props.className}`}>
-      <input type={"text"} className={classNameInput}/>
+      <input type={"text"} className={"filter-input " + classNameInput}/>
 
-      <input type={"date"} className={classNameInput}/>
-      <input type={"date"} className={classNameInput}/>
+      <input type={"date"} className={"filter-input " + classNameInput}/>
+      <input type={"date"} className={"filter-input " + classNameInput}/>
 
       <SelectCustom className={"h-full max-w-[178px] min-w-[178px]"} placeholder={"Todas empresas"} options={options} isMulti />
       <SelectCustom className={"h-full max-w-[175px] min-w-[178px]"} placeholder={"Todas as areas"} options={optionsC} isMulti />

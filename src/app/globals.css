@@ -17,7 +17,6 @@ html, body {
     height: 100%;
 }
 
-
 :root {
     --principal-color: #444CE6;
     --principal-color-rgb: 68, 76, 230;
@@ -25,32 +24,34 @@ html, body {
     --default-bg-rgb: 243, 244, 246;
     --default-bg-dark: #F4F4F4;
     --principal-opacity: .8;
+    --secundary-font: 'Poppins';
+}
+
+.font-secundary {
+    font-family: var(--secundary-font), sans-serif;
 }
 
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
-    border-radius: 8px;
+    border-radius: 80px;
 }
 
 ::-webkit-scrollbar-track {
     background: #f0f0f0;
+    border-radius: 80px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--principal-color);
-    border-radius: 6px;
     border: 2px solid #f0f0f0;
+    border-radius: 80px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--principal-color);
 }
 
-* {
-    /*scrollbar-width: thin;*/
-    scrollbar-color: var(--principal-color) #f0f0f0;
-}
 
 .container-custom-scroll {
     scrollbar-width: thin;
