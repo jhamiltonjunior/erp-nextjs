@@ -38,8 +38,6 @@ export default function CardVacancy() {
     },
   ]
 
-  console.log(options[0].value)
-
   return (
       <section className={"w-full bg-white p-4 shadow rounded border-b-4 border-[var(--principal-color)] grid grid-cols-1 gap-2 grid-rows-3"}>
         <header className={"flex justify-between"}>

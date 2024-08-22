@@ -27,8 +27,6 @@ const Menu = () => {
         element = element.parentElement;
       }
 
-      console.log(element)
-
       if ((menu && !menu.contains(event.target)) || (menuToggle && menuToggle.contains(event.target))) {
         menu.classList.remove('open');
         setIsOpen(false);

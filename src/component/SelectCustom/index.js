@@ -1,32 +1,59 @@
 import React, { useState } from "react";
 import Select, { components } from "react-select";
-
+import CreatableSelect from 'react-select/creatable';
 const SelectCustom = (props) => {
   const [value, setValue] = useState("");
+  const isCreatable = props?.isCreatable
 
   return (
-      <Select
-        placeholder={props.placeholder}
-        className={`${props.className} border-red-600`}
-        defaultValue={value || props.defaultValue}
-        onChange={setValue}
-        options={props.options}
-        isMulti={!!props.isMulti}
-        isClearable={props.isClearable}
-        classNames={{
-          // control: (state) =>
+      isCreatable ? (
+        <CreatableSelect
+          placeholder={props.placeholder}
+          className={`${props.className} border-red-600`}
+          defaultValue={value || props.defaultValue}
+          onChange={setValue}
+          options={props.options}
+          isMulti={!!props.isMulti}
+          isClearable={props.isClearable}
+          classNames={{
+            // control: (state) =>
             // state.isFocused ? 'border-red-600' : 'border-red-300',
-        }}
+          }}
 
-        styles={{
-          control: (baseStyles, state) => ({
-            ...baseStyles,
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
 
-            // borderColor: state.isFocused ? 'border-red-600' : 'border-grey-300',
-          }),
-        }}
+              // borderColor: state.isFocused ? 'border-red-600' : 'border-grey-300',
+            }),
+          }}
 
-      />
+        />
+      ) : (
+        <Select
+          placeholder={props.placeholder}
+          className={`${props.className} border-red-600`}
+          defaultValue={value || props.defaultValue}
+          onChange={setValue}
+          options={props.options}
+          isMulti={!!props.isMulti}
+          isClearable={props.isClearable}
+          classNames={{
+            // control: (state) =>
+            // state.isFocused ? 'border-red-600' : 'border-red-300',
+          }}
+
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+
+              // borderColor: state.isFocused ? 'border-red-600' : 'border-grey-300',
+            }),
+          }}
+
+        />
+      )
+
   );
 };
 
