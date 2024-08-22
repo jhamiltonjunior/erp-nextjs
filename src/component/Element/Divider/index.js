@@ -1,5 +1,5 @@
 export default function Divider(props) {
   return (
-    <hr className={"w-full"} />
+    <hr className={props.className + " w-full my-6 max-w-full"} />
   )
 }
