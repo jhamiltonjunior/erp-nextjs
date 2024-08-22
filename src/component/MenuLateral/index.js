@@ -41,7 +41,7 @@ const Menu = () => {
   }, [])
 
   return (
-    <div className="flex items-center justify-center h-screen fixed">
+    <div className="flex z-[1001] items-center justify-center h-screen fixed">
       <button
         className="relative w-10 h-10 focus:outline-none menu-toggle"
         onClick={toggleMenu}
@@ -56,7 +56,7 @@ const Menu = () => {
           className={`block absolute h-[0.18rem] w-5 bg-black transform transition duration-500 ease-in-out ${isOpen ? '-rotate-45 open' : 'translate-y-2'}`}
         ></span>
       </button>
-      <nav className={`menu shadow-ambr-500 ${isOpen ? 'open' : 'closed'}`}>
+      <nav className={`menu shadow-ambr-500 z-[1001] ${isOpen ? 'open' : 'closed'}`}>
         <section className={"bg-[var(--principal-color)] p-10"}>
           <h2 className={"text-center"}>ERP</h2>
         </section>
