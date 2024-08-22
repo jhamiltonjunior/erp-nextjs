@@ -1,6 +1,5 @@
 "use client"
 
-import Filter from "@/component/Filter";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faClock, faCircleXmark} from "@fortawesome/free-regular-svg-icons";

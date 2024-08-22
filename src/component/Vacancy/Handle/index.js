@@ -1,8 +1,8 @@
-import SelectCustom from "src/component/Element/SelectCustom";
+import SelectCustom from "@/component/Element/SelectCustom";
 import CustomInput from "@/component/Element/CustomInput";
 import Divider from "@/component/Element/Divider";
 import CustomTextArea from "@/component/Element/CustomTextArea";
-import NormalButton from "src/component/Element/NormalButton";
+import NormalButton from "@/component/Element/NormalButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
 import React from "react";

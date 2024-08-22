@@ -2,8 +2,8 @@
 
 import Filter from "@/component/Filter";
 import {useState} from "react";
-import CardVacancy from "src/component/Vacancy/CardVacancy";
-import NormalButton from "src/component/Element/NormalButton";
+import CardVacancy from "@/component/Vacancy/CardVacancy";
+import NormalButton from "@/component/Element/NormalButton";
 import {faPlus, faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";

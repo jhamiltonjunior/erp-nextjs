@@ -1,6 +1,6 @@
 "use client"
 import './style.css'
-import SelectCustom from "src/component/Element/SelectCustom";
+import SelectCustom from "@/component/Element/SelectCustom";
 
 export default function Filter(props) {
   const classNameInput = "border p-0.5 rounded px-2 focus:border-[var(--principal-color) focus:outline-none]"
