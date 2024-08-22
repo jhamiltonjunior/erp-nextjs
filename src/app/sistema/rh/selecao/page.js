@@ -7,6 +7,7 @@ import NormalButton from "@/component/NormalButton";
 import {faPlus, faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";
+import HandleVacancy from "@/component/Vacancy/Handle";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -41,7 +42,10 @@ export default function SelectionPage() {
           )
         }
 
-        <SimpleModal isOpen={visibleModalHandleVacancy} setIsOpen={setVisibleModalHandleVacancy}  />
+        <SimpleModal
+          content={<HandleVacancy />}
+          isOpen={visibleModalHandleVacancy}
+          setIsOpen={setVisibleModalHandleVacancy}/>
 
         <CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />
         <CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />
