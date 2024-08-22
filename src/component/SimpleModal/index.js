@@ -128,7 +128,7 @@ const Modal = ({isOpen, setIsOpen} ) => {
 
           <section className={"w-full flex justify-center mt-5"}>
             <NormalButton
-
+              type={"submit"}
               className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
               icon={<FontAwesomeIcon icon={faCheck}/>}
               text={<p>Salvar</p>}
