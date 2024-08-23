@@ -29,7 +29,12 @@ export default function Filter(props) {
   ];
 
   return (
-    <section className={`filter bg-[var(--default-bg-rgb)]  z-[100] box-border grid xl:grid-cols-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 ${props.className}`}>
+    <section
+      className={`filter bg-[var(--default-bg-rgb)]
+       z-[100] box-border grid xl:grid-cols-7 
+       lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 ${props.className}
+       transition-all duration-1000 ease-in-out
+       `}>
       <input type={"text"} className={"filter-input w-full " + classNameInput}/>
 
       <input type={"date"} className={"filter-input w-full " + classNameInput}/>
