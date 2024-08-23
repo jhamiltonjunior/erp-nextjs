@@ -6,11 +6,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBriefcase, faCheck, faFilter, faLockOpen, faPercent, faPlus} from "@fortawesome/free-solid-svg-icons";
 import React, {useState} from "react";
 import Card from "@/component/Simple/Card";
-import ApexChart from "@/component/Graphic/Basic";
+import dynamic from "next/dynamic";
+// import ApexChart from "@/component/Graphic/Basic";
 
 // metadata.title = 'Gerenciamento de RH'
 
-
+const ApexChart = dynamic(() => import('@/component/Graphic/Basic'),   { ssr: false })
 export default function RHPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
   const series = {
@@ -141,7 +142,10 @@ export default function RHPage() {
             <Card className={`border-[var(--principal-color)] w-full`}>
               <section className={"w-full flex items-start flex-wrap"}>
 
-                <ApexChart seriesData={series} />
+                {
+                  (typeof window !== 'undefined') &&
+                  <ApexChart seriesData={series} />
+                }
               </section>
             </Card>
           </section>
