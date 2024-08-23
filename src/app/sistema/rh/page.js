@@ -43,6 +43,13 @@ export default function RHPage() {
       color: 'var(--principal-color)',
       icon: faPercent,
     },
+    // {
+    //   n: '39%',
+    //   text: '',
+    //   description: 'Porcentagem de contratacoes',
+    //   color: 'var(--principal-color)',
+    //   icon: faPercent,
+    // },
   ]
 
   return (
@@ -80,9 +87,26 @@ export default function RHPage() {
               </Card>
             ))
           }
-
-
         </header>
+
+        <main className={"w-full flex flex-col gap-8"}>
+          <section className={"w-full bg-white"}>
+            <section className={"flex gap-8 justify-start w-full items-center px-10 pt-10"}>
+              <FontAwesomeIcon icon={faPercent} className={`text-[var(--principal-color)] text-2xl`}/>
+              <section className={"flex items-start flex-wrap"}>
+                <h2 className={"text-xl w-full text-start"}><span className={"text-2xl"}>87</span> Grafico Bonito</h2>
+                <p className={"text-sm"}>Visualize aqui</p>
+              </section>
+            </section>
+            <Card className={`border-[var(--principal-color)] w-full`}>
+              <section className={"w-full flex items-start flex-wrap"}>
+                <h2 className={"text-xl w-full text-start"}><span className={"text-2xl"}>87</span> Grafico Bonito</h2>
+                <p className={"text-sm"}>Visualize aqui</p>
+              </section>
+            </Card>
+          </section>
+
+        </main>
 
 
       </section>
