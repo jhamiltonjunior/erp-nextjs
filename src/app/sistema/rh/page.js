@@ -4,15 +4,55 @@ import Filter from "@/component/Filter";
 import NormalButton from "@/component/Element/NormalButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBriefcase, faCheck, faFilter, faLockOpen, faPercent, faPlus} from "@fortawesome/free-solid-svg-icons";
-import {useState} from "react";
+import React, {useState} from "react";
 import Card from "@/component/Simple/Card";
-// import {metadata} from "@/app/sistema/layout";
+import ApexChart from "@/component/Graphic/Basic";
 
 // metadata.title = 'Gerenciamento de RH'
 
 
 export default function RHPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
+  const series = {
+    monthDataSeries1: {
+      prices: [7107.85, 8128.0, 8122.9, 8165.5, 8340.7, 8423.7, 8123.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2, 8668.95, 8602.3],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01"
+      ]
+    },
+    monthDataSeries2: {
+      prices: [7000.0, 8600.5, 8120.8, 8750.4, 8300.9, 8300.0, 8390.5, 8450.2, 8500.3, 8550.1, 8600.0, 8650.5, 8700.4, 8800.2],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01"
+      ]
+    }
+  };
 
   const data = [
     {
@@ -100,8 +140,8 @@ export default function RHPage() {
             </section>
             <Card className={`border-[var(--principal-color)] w-full`}>
               <section className={"w-full flex items-start flex-wrap"}>
-                <h2 className={"text-xl w-full text-start"}><span className={"text-2xl"}>87</span> Grafico Bonito</h2>
-                <p className={"text-sm"}>Visualize aqui</p>
+
+                <ApexChart seriesData={series} />
               </section>
             </Card>
           </section>
