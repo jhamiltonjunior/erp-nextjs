@@ -29,7 +29,7 @@ export default function Filter(props) {
   ];
 
   return (
-    <section className={`filter z-[100] min-h-fit box-border grid xl:grid-cols-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 ${props.className}`}>
+    <section className={`filter bg-[var(--default-bg-rgb)]  z-[100] box-border grid xl:grid-cols-7 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 ${props.className}`}>
       <input type={"text"} className={"filter-input w-full " + classNameInput}/>
 
       <input type={"date"} className={"filter-input w-full " + classNameInput}/>
@@ -41,7 +41,7 @@ export default function Filter(props) {
 
       <NormalButton
         type={"submit"}
-        className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px] xl:col-span-1 lg:col-span-3 md:col-span-2 sm:col-span-1"}
+        className={"flex h-full items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px] xl:col-span-1 lg:col-span-3 md:col-span-2 sm:col-span-1"}
         icon={<FontAwesomeIcon icon={faSearch}/>}
         text={<p>Aplicar</p>}
         onClick={() => console.log("Pesquisar")}/>

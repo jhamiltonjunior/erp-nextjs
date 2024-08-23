@@ -38,7 +38,7 @@ export default function SelectionPage() {
         </section>
         {
           visibleFilter && (
-            <Filter className={"max-h-10"} />
+            <Filter className={""} />
           )
         }
 

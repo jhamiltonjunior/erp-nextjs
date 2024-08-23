@@ -26,7 +26,7 @@ export default function RHPage() {
         </section>
         {
           visibleFilter && (
-            <Filter className={"max-h-10"}/>
+            <Filter className={""}/>
           )
         }
 
