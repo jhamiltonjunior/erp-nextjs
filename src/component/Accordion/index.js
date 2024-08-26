@@ -45,7 +45,7 @@ const Accordion = (props) => {
   ];
   const rhLink = [
     "",
-    "selecao",
+    "recrutamento",
     "recrutamento",
     "treinamentos",
     "desenvolvimento-de-programas",
