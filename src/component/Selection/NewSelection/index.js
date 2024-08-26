@@ -7,10 +7,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function HandleVacancy(props) {
+export default function NewSelection(props) {
   return (
     <form className={"overflow-auto bg-white p-4 h-full max-h-screen max-w-screen"}>
-      <h2 className={"text-center text-2xl font-bold font-secundary']"}>Seu Portal de Vagas</h2>
+      <h2 className={"text-center text-2xl font-bold font-secundary']"}>Novo Processo Seletivo</h2>
       {/*
 
           Esse modal será apenas um component que terá outro component dentro

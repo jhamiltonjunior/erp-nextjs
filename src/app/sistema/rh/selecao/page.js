@@ -9,6 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";
 import HandleVacancy from "@/component/Vacancy/Handle";
 import Calendar from "@/component/Calendar";
+import NewSelection from "@/component/Selection/NewSelection";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -34,7 +35,7 @@ export default function SelectionPage() {
 
             className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
             icon={<FontAwesomeIcon icon={faPlus} />}
-            text={<p>Nova Tipo de Processo</p>}
+            text={<p>Novo Processo</p>}
             onClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)}/>
         </section>
         {
@@ -44,7 +45,7 @@ export default function SelectionPage() {
         }
 
         <SimpleModal
-          content={<HandleVacancy />}
+          content={<NewSelection />}
           isOpen={visibleModalHandleVacancy}
           setIsOpen={setVisibleModalHandleVacancy}/>
 

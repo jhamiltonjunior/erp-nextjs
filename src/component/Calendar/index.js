@@ -21,19 +21,26 @@ export default function Calendar({className}) {
 
   for (let i = 0; i < 90; i++) {
     let day = Math.floor(Math.random() * 30) + 1;
+    let hour = Math.floor(Math.random() * 20) + 7;
 
     day <= 9 ? day = `0${day}`: ''
+    let hourInitial = hour <= 9 ? day = `0${hour}:00:00`: `${hour}:00:00`
+    let hourFinal = hour <= 9 ? day = `0${hour + 1}:00:00`: `${hour + 1}:00:00`
 
     event.push(
-      { title: 'event '+ i, date: '2024-08-' + day }
+      {
+        title: 'event '+ i,
+        start: '2024-08-' + day + `T${hourInitial}`
+
+      }
     )
   }
 
   return (
-    <main className={`calendar w-full  ${className}`}>
+    <main className={`calendar max-h-screen w-full h-full ${className}`}>
       <FullCalendar
-        className={`w-full max-h-[80px]`}
-        dayMaxEventRows={3}
+        height={"100%"}
+        dayMaxEventRows={1}
         ref={calendarRef}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         editable={true}
@@ -93,6 +100,30 @@ export default function Calendar({className}) {
           console.log('Clicked on event: ' + info.event.title);
 
           console.log(info)
+        }}
+        dayMaxEvents={true}
+        allDaySlot={false}
+        slotMinTime={"07:00:00"}
+        slotMaxTime={"20:00:00"}
+        slotDuration={'00:10:00'}
+        slotLabelInterval={'01:00:00'}
+        initialDate={new Date()}
+        navLinks={true}
+        selectable={true}
+        selectMirror={true}
+
+        dayPopoverFormat={{
+          weekday: 'long',
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        }}
+
+        slotLabelFormat={{
+          hour: '2-digit',
+          minute: '2-digit',
+          omitZeroMinute: false,
+          meridiem: 'short'
         }}
 
       />
