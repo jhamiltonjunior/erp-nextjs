@@ -6,12 +6,12 @@ import SelectCustom from "@/component/Element/SelectCustom";
 
 export default function ApexChart({ seriesData }) { // Você pode passar as séries e dados como props
   const options = [
-    { value: 'Últimos 6 meses', label: '6 meses' },
-    { value: 'Último ano', label: '1 ano' },
-    { value: 'Últimos 10 anos', label: '5 anos' },
-    { value: 'Últimos 10 anos', label: '10 anos' },
-    { value: 'Mês', label: 'Mês' },
-    { value: 'Ano', label: 'Ano' },
+    { value: 'Últimos 6 meses', label: 'Últimos 6 meses' },
+    { value: 'Último ano', label: 'Últimos 12 meses' },
+    { value: 'Últimos 5 anos', label: 'Últimos 5 anos' },
+    { value: 'Últimos 10 anos', label: 'Últimos 10 anos' },
+    { value: 'Mês', label: 'Mês Atual' },
+    { value: 'Ano', label: 'Ano Atual' },
   ];
 
   const [chartOptions] = useState({
