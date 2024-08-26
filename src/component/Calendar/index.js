@@ -17,6 +17,18 @@ export default function Calendar({className}) {
     }
   }, []);
 
+  let event = []
+
+  for (let i = 0; i < 90; i++) {
+    let day = Math.floor(Math.random() * 30) + 1;
+
+    day <= 9 ? day = `0${day}`: ''
+
+    event.push(
+      { title: 'event '+ i, date: '2024-08-' + day }
+    )
+  }
+
   return (
     <main className={`calendar w-full  ${className}`}>
       <FullCalendar
@@ -39,20 +51,7 @@ export default function Calendar({className}) {
           week: "Semana",
           day: "Dia",
         }}
-        events={[
-          { title: 'event 1', date: '2024-08-01' },
-          { title: 'event 2', date: '2024-08-02' },
-          { title: 'event 1', date: '2024-08-03' },
-          { title: 'event 2', date: '2024-08-04' },
-          { title: 'event 1', date: '2024-08-05' },
-          { title: 'event 2', date: '2024-08-06' },
-          { title: 'event 1', date: '2024-08-01' },
-          { title: 'event 2', date: '2024-08-02' },
-          { title: 'event 1', date: '2024-08-03' },
-          { title: 'event 2', date: '2024-08-04' },
-          { title: 'event 1', date: '2024-08-05' },
-          { title: 'event 2', date: '2024-08-06' },
-        ]}
+        events={event}
         customButtons={{
           prev: {
             text: 'Mes Anterior',
