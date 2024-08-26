@@ -16,7 +16,7 @@ export default function RHPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
   const series = {
     monthDataSeries1: {
-      prices: [7107.85, 8128.0, 8122.9, 8165.5, 8340.7, 8423.7, 8123.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2, 8668.95, 8602.3],
+      prices: [7.85, 8.0, 8.9, 8.5, 8.7, 8.7],
       dates: [
         "2024-01-01",
         "2024-02-01",
@@ -24,18 +24,10 @@ export default function RHPage() {
         "2024-04-01",
         "2024-05-01",
         "2024-06-01",
-        "2024-07-01",
-        "2024-08-01",
-        "2024-09-01",
-        "2024-10-01",
-        "2024-11-01",
-        "2024-12-01",
-        "2025-01-01",
-        "2025-02-01"
       ]
     },
     monthDataSeries2: {
-      prices: [7000.0, 8600.5, 8120.8, 8750.4, 8300.9, 8300.0, 8390.5, 8450.2, 8500.3, 8550.1, 8600.0, 8650.5, 8700.4, 8800.2],
+      prices: [7.0, 8.5, 8.8, 8.4, 8.9, 8.0],
       dates: [
         "2024-01-01",
         "2024-02-01",
@@ -43,14 +35,54 @@ export default function RHPage() {
         "2024-04-01",
         "2024-05-01",
         "2024-06-01",
-        "2024-07-01",
-        "2024-08-01",
-        "2024-09-01",
-        "2024-10-01",
-        "2024-11-01",
-        "2024-12-01",
-        "2025-01-01",
-        "2025-02-01"
+      ]
+    }
+  };
+  const series2 = {
+    monthDataSeries1: {
+      prices: [85, 80, 89, 85, 87, 87],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+      ]
+    },
+    monthDataSeries2: {
+      prices: [70, 85, 88, 84, 89, 80],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+      ]
+    }
+  };
+  const series3 = {
+    monthDataSeries1: {
+      prices: [785, 800, 809, 850, 870, 807],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+      ]
+    },
+    monthDataSeries2: {
+      prices: [760, 850, 880, 804, 809, 800],
+      dates: [
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
       ]
     }
   };
@@ -135,6 +167,44 @@ export default function RHPage() {
             <section className={"flex gap-8 justify-start w-full items-center px-10 pt-10"}>
               <FontAwesomeIcon icon={faPercent} className={`text-[var(--principal-color)] text-2xl`}/>
               <section className={"flex items-start flex-wrap"}>
+                <h2 className={"text-xl w-full text-start"}>Taxa de Admissoes</h2>
+                <p className={"text-sm"}>Visualize aqui</p>
+              </section>
+            </section>
+            <Card className={`border-[var(--principal-color)] w-full`}>
+              <section className={"w-full flex items-start flex-wrap"}>
+
+                {
+                  (typeof window !== 'undefined') &&
+                  <ApexChart seriesData={series}/>
+                }
+              </section>
+            </Card>
+          </section>
+
+          <section className={"w-full bg-white"}>
+            <section className={"flex gap-8 justify-start w-full items-center px-10 pt-10"}>
+              <FontAwesomeIcon icon={faPercent} className={`text-[var(--principal-color)] text-2xl`}/>
+              <section className={"flex items-start flex-wrap"}>
+                <h2 className={"text-xl w-full text-start"}>Turnover</h2>
+                <p className={"text-sm"}>Visualize aqui</p>
+              </section>
+            </section>
+            <Card className={`border-[var(--principal-color)] w-full`}>
+              <section className={"w-full flex items-start flex-wrap"}>
+
+                {
+                  (typeof window !== 'undefined') &&
+                  <ApexChart seriesData={series2}/>
+                }
+              </section>
+            </Card>
+          </section>
+
+          <section className={"w-full bg-white"}>
+            <section className={"flex gap-8 justify-start w-full items-center px-10 pt-10"}>
+              <FontAwesomeIcon icon={faPercent} className={`text-[var(--principal-color)] text-2xl`}/>
+              <section className={"flex items-start flex-wrap"}>
                 <h2 className={"text-xl w-full text-start"}><span className={"text-2xl"}>87</span> Grafico Bonito</h2>
                 <p className={"text-sm"}>Visualize aqui</p>
               </section>
@@ -144,11 +214,12 @@ export default function RHPage() {
 
                 {
                   (typeof window !== 'undefined') &&
-                  <ApexChart seriesData={series} />
+                  <ApexChart seriesData={series3}/>
                 }
               </section>
             </Card>
           </section>
+
 
         </main>
 

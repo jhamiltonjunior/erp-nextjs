@@ -2,8 +2,18 @@
 
 import React, { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
+import SelectCustom from "@/component/Element/SelectCustom";
 
 export default function ApexChart({ seriesData }) { // Você pode passar as séries e dados como props
+  const options = [
+    { value: 'Últimos 6 meses', label: '6 meses' },
+    { value: 'Último ano', label: '1 ano' },
+    { value: 'Últimos 10 anos', label: '5 anos' },
+    { value: 'Últimos 10 anos', label: '10 anos' },
+    { value: 'Mês', label: 'Mês' },
+    { value: 'Ano', label: 'Ano' },
+  ];
+
   const [chartOptions] = useState({
     chart: {
       type: 'area',
@@ -58,8 +68,9 @@ export default function ApexChart({ seriesData }) { // Você pode passar as sér
   ]);
 
   return (
-    <div className={"w-full"}>
-      <div id="chart">
+    <div className={"w-full flex flex-wrap fex-column justify-end items-end gap-8 "}>
+      <SelectCustom defaultValue={options[0].value} placeholder={"Periodo"} options={options} className={"max-w-44 z-50"}/>
+      <div id="chart" className={"w-full"}>
         <ReactApexChart options={chartOptions} series={series} type="area" height={300} />
       </div>
       <div id="html-dist"></div>
