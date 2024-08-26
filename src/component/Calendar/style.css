@@ -1,0 +1,50 @@
+.fc-button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    /*background-color: var(--principal-color) !important;*/
+    padding: .5rem;
+    color: #fff;
+}
+
+
+
+
+.fc-daygrid-day {
+    background-color: #f4f4f4; /* Cor de fundo das células */
+    border: 1px solid #e0e0e0; /* Borda das células */
+    max-height: 160px;
+}
+
+.fc-event {
+    background-color: #3498db; /* Cor de fundo dos eventos */
+    color: #fff; /* Cor do texto dos eventos */
+    border: none; /* Remover borda dos eventos */
+}
+
+/*.fc-toolbar {*/
+/*    background-color: #333; !* Cor de fundo da barra de ferramentas *!*/
+/*    color: #fff; !* Cor do texto da barra de ferramentas *!*/
+/*}*/
+.fc-daygrid-day-number {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    font-weight: bold; /* Negrito para os números dos dias */
+}
+
+.fc-event-title {
+    font-family: 'Arial', sans-serif; /* Fonte para os títulos dos eventos */
+    font-size: 0.9rem; /* Tamanho da fonte dos títulos dos eventos */
+}
+
+.custom-button {
+    background-color: #3498db; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Cursor de pointer */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.custom-button:hover {
+    background-color: #2980b9; /* Cor ao passar o mouse */
+}

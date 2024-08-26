@@ -9,7 +9,7 @@
 * {
     /*margin: 0;*/
     padding: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -26,6 +26,54 @@ html, body {
     --default-bg-dark: #F4F4F4;
     --principal-opacity: .8;
     --secundary-font: 'Poppins';
+    --fc-button-bg-color: var(--principal-color);
+    --fc-button-active-bg-color: #2b3093;
+    --fc-button-active-border-color: #2b3093;
+    --fc-button-hover-border-color: var(--principal-color);
+    --fc-button-hover-bg-color: var(--principal-color);
+    --fc-button-border-color: var(--principal-color);
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child),
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child),
+.fc .fc-button{
+    border-radius: 0;
+    transition: all 300ms ease-in-out;
+
+    outline: none;
+
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.fc-timegrid-axis-cushion {
+    max-width: 80px;
+}
+
+.fc .fc-button:focus {
+    outline: none !important;
+}
+.fc .fc-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 644px) {
+    .fc-toolbar-chunk:nth-of-type(2) {
+        display: none;
+        width: 100%;
+    }
+
+    .fc .fc-header-toolbar {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        align-items: center;
+    }
 }
 
 .font-secundary {
