@@ -30,7 +30,7 @@ const SelectCustom = (props) => {
 
   return (
       isCreatable ? (
-        <ComboboxDemo classNameContent={"w-[25.875rem]"} placeholder={props.placeholder} options={props.options} />
+        <ComboboxDemo classNameContent={"lg:w-[25.875rem] sm:max-w-full max-w-60 w-[21.375rem]"} placeholder={props.placeholder} options={props.options} />
       ) : (
         <SelectUI className={`border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${props.className}`}>
           <SelectTrigger
@@ -100,7 +100,7 @@ export function ComboboxDemo(props) {
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className={`max-w-full p-0 ${props.classNameContent}`}>
+      <PopoverContent className={`p-0 ${props.classNameContent}`}>
         <Command>
           <CommandInput placeholder={props.placeholder} />
           <CommandList>

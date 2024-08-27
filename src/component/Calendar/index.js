@@ -19,7 +19,7 @@ export default function Calendar({className}) {
 
   let event = []
 
-  for (let i = 0; i < 90; i++) {
+  for (let i = 0; i < 20; i++) {
     let day = Math.floor(Math.random() * 30) + 1;
     let hour = Math.floor(Math.random() * 20) + 7;
 
