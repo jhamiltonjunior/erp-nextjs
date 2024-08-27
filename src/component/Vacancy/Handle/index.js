@@ -26,11 +26,11 @@ export default function HandleVacancy(props) {
               label: 'Google'
             },
             {
-              value: 'google',
+              value: 'Amazon',
               label: 'Amazon'
             },
             {
-              value: 'google',
+              value: 'Microsoft',
               label: 'Microsoft'
             },
           ]}/>
@@ -47,35 +47,35 @@ export default function HandleVacancy(props) {
 
       <h2 className={"text-xl text-start mb-5"}>2 - Informacoes da vaga</h2>
       <section className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2"}>
-        <label className={"text-start"}> Nome da vaga
-          <SelectCustom isClearable isCreatable className={""} options={[
+        <label className={"text-start"}> Nome
+          <SelectCustom isClearable isCreatable placeholder={"Nome da Vaga..."} className={""} options={[
             {
-              value: 'google',
+              value: 'Auxiliar Administrativo',
               label: 'Auxiliar Administrativo'
             },
             {
-              value: 'google',
+              value: 'Desenvolvedor Web',
               label: 'Desenvolvedor Web'
             },
             {
-              value: 'google',
+              value: 'Engenheiro de Software',
               label: 'Engenheiro de Software'
             },
           ]}/>
         </label>
 
         <label className={"text-start"}> Localidade
-          <SelectCustom isClearable className={""} options={[
+          <SelectCustom isClearable placeholder={"Localidade"} className={"w-full"} options={[
             {
-              value: 'google',
+              value: 'Remoto',
               label: 'Remoto'
             },
             {
-              value: 'google',
+              value: 'Híbrido',
               label: 'Híbrido'
             },
             {
-              value: 'google',
+              value: 'Presencial',
               label: 'Presencial'
             },
           ]}/>

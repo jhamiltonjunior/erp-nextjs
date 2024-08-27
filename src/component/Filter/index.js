@@ -10,15 +10,15 @@ export default function Filter(props) {
   const classNameInput = "border p-0.5 rounded px-2 focus:border-[var(--principal-color) focus:outline-none]"
 
   const options = [
-    { value: 'chocolate', label: 'Ambev' },
-    { value: 'strawberry', label: 'Google' },
-    { value: 'vanilla', label: 'Amazon' },
+    { value: 'Ambev', label: 'Ambev' },
+    { value: 'Google', label: 'Google' },
+    { value: 'Amazon', label: 'Amazon' },
   ];
 
   const optionsC = [
-    { value: 'chocolate', label: 'Tecnologia' },
-    { value: 'strawberry', label: 'Automacao' },
-    { value: 'vanilla', label: 'Vanilla' },
+    { value: 'Tecnologia', label: 'Tecnologia' },
+    { value: 'Automacao', label: 'Automacao' },
+    { value: 'Vanilla', label: 'Vanilla' },
   ];
 
   const optionsArrow = [
