@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";
 import HandleVacancy from "@/component/Vacancy/Handle";
 import Calendar from "@/component/Calendar";
-import NewSelection from "@/component/Selection/NewSelection";
+import HandleProcessSelective from "@/component/Selection/NewSelection";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -45,11 +45,11 @@ export default function SelectionPage() {
         }
 
         <SimpleModal
-          content={<NewSelection />}
+          content={<HandleProcessSelective />}
           isOpen={visibleModalHandleVacancy}
           setIsOpen={setVisibleModalHandleVacancy}/>
 
-        <Calendar />
+        <Calendar eventClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />
 
         {/*<CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />*/}
         {/*<CardVacancy setIsOpenEdit={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />*/}

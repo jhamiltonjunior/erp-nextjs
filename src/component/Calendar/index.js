@@ -3,12 +3,13 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import ptBrLocale from '@fullcalendar/core/locales/pt-br';
 import './style.css'
 
-export default function Calendar({className}) {
+export default function Calendar({className, eventClick}) {
   const calendarRef = useRef(null);
+  const [event, setEvent] = useState([])
 
   useEffect(() => {
     if (calendarRef.current) {
@@ -17,24 +18,28 @@ export default function Calendar({className}) {
     }
   }, []);
 
-  let event = []
+  useEffect(() => {
+    let event = []
+    for (let i = 0; i < 20; i++) {
+      let day = Math.floor(Math.random() * 30) + 1;
+      let hour = Math.floor(Math.random() * 20) + 7;
 
-  for (let i = 0; i < 20; i++) {
-    let day = Math.floor(Math.random() * 30) + 1;
-    let hour = Math.floor(Math.random() * 20) + 7;
+      day <= 9 ? day = `0${day}`: ''
+      let hourInitial = hour <= 9 ? day = `0${hour}:00:00`: `${hour}:00:00`
+      let hourFinal = hour <= 9 ? day = `0${hour + 1}:00:00`: `${hour + 1}:00:00`
 
-    day <= 9 ? day = `0${day}`: ''
-    let hourInitial = hour <= 9 ? day = `0${hour}:00:00`: `${hour}:00:00`
-    let hourFinal = hour <= 9 ? day = `0${hour + 1}:00:00`: `${hour + 1}:00:00`
+      event.push(
+        {
+          title: 'event '+ i,
+          start: '2024-08-' + day + `T${hourInitial}`
 
-    event.push(
-      {
-        title: 'event '+ i,
-        start: '2024-08-' + day + `T${hourInitial}`
+        }
+      )
+    }
 
-      }
-    )
-  }
+    setEvent(event)
+  }, [setEvent]);
+
 
   return (
     <main className={`calendar max-h-screen w-full h-full ${className}`}>
@@ -96,6 +101,7 @@ export default function Calendar({className}) {
         }}
 
         eventClick={function(info) {
+          eventClick()
           console.log('Clicked on: ' + info.dateStr);
           console.log('Clicked on event: ' + info.event.title);
 

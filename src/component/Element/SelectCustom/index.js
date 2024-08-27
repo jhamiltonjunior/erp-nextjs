@@ -30,7 +30,7 @@ const SelectCustom = (props) => {
 
   return (
       isCreatable ? (
-        <ComboboxDemo classNameContent={"lg:w-[25.875rem] sm:max-w-full max-w-60 w-[21.375rem]"} placeholder={props.placeholder} options={props.options} />
+        <ComboboxDemo classNameContent={props.classNameContent} placeholder={props.placeholder} options={props.options} />
       ) : (
         <SelectUI className={`border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${props.className}`}>
           <SelectTrigger

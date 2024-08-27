@@ -9,10 +9,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sistema/rh/selecao/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sistema/rh/selecao/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Calendar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Filter/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Graphic/Basic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Graphic/Basic/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Selection/NewSelection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Selection/NewSelection/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Vacancy/Handle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Vacancy/Handle/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/ui/select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ui/select/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.js" afterDir="false" />
@@ -99,7 +101,7 @@
       <workItem from="1724628341113" duration="11335000" />
       <workItem from="1724667199565" duration="1203000" />
       <workItem from="1724703523022" duration="3207000" />
-      <workItem from="1724712164387" duration="8365000" />
+      <workItem from="1724712164387" duration="10295000" />
     </task>
     <servers />
   </component>
