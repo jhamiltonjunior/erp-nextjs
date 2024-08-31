@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a360120d-78e6-4cbb-8a4d-fd145362492a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/ui/button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sistema/rh/selecao/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sistema/rh/selecao/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Calendar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Filter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Graphic/Basic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Graphic/Basic/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Selection/NewSelection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Selection/NewSelection/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Vacancy/Handle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Vacancy/Handle/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ui/select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ui/select/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +37,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.15.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.15.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/is_me/go/src/github.com/jhamiltonjunior/plataforma-ead/front&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/is_me/.app/artificial-intelligence-image-analyzer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -101,7 +90,9 @@
       <workItem from="1724628341113" duration="11335000" />
       <workItem from="1724667199565" duration="1203000" />
       <workItem from="1724703523022" duration="3207000" />
-      <workItem from="1724712164387" duration="10295000" />
+      <workItem from="1724712164387" duration="10803000" />
+      <workItem from="1724790710500" duration="819000" />
+      <workItem from="1725133787549" duration="879000" />
     </task>
     <servers />
   </component>
