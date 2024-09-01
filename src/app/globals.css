@@ -190,6 +190,12 @@ html, body {
     scrollbar-color: #e74c3c #f0f0f0;
 }
 
+span[data-state="checked"], button[data-state="checked"] {
+    overflow: hidden;
+    background-color: var(--principal-color);
+    border-color: var(--principal-color);
+}
+
 /*::-webkit-scrollbar-horizontal {*/
 /*    height: 10px;*/
 /*}*/

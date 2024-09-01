@@ -17,3 +17,15 @@
 .menu-item-a:hover::before {
     width: 100%;
 }
+
+.content-accordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    /*transform: translateY(-100%);*/
+}
+
+.content-accordion.open {
+    max-height: 500px;
+    overflow-y: auto;
+}

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import './style.css'
 
-const AccordionItem = ({ title, content }) => {
+export const AccordionItem = ({ title, content, className}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -12,7 +12,7 @@ const AccordionItem = ({ title, content }) => {
   };
 
   return (
-    <div className="border-b border-gray-200">
+    <div className={`border-b border-gray-200 ${className}`}>
       <button
         onClick={toggleAccordion}
         className="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 focus:outline-none"
@@ -24,11 +24,9 @@ const AccordionItem = ({ title, content }) => {
           </span>
         </div>
       </button>
-      {isOpen && (
-        <div className="bg-white text-slate-950">
-          {content}
-        </div>
-      )}
+      <div className={`content-accordion bg-white text-slate-950 ${isOpen ? "open" : ""}`}>
+        {content}
+      </div>
     </div>
   );
 };
@@ -36,8 +34,8 @@ const AccordionItem = ({ title, content }) => {
 const Accordion = (props) => {
   const rh = [
     "Painel",
-    "Seleção",
     "Recrutamento",
+    "Seleção",
     "Treinamentos",
     "Desenvolvimento de programas",
     "Organizar entrevistas",
@@ -45,8 +43,8 @@ const Accordion = (props) => {
   ];
   const rhLink = [
     "",
-    "selecao",
     "recrutamento",
+    "selecao",
     "treinamentos",
     "desenvolvimento-de-programas",
     "organizar-entrevistas",
@@ -179,25 +177,3 @@ const Accordion = (props) => {
 };
 
 export default Accordion;
-
-// uso do link
-
-// import { useRouter } from 'next/router';
-//
-// const Content = () => {
-//   const router = useRouter();
-//   const { pathname } = router;
-//
-//   return (
-//     <div>
-//       {pathname === '/page1' && <Page1 />}
-//       {pathname === '/page2' && <Page2 />}
-//       {/* Adicione mais condições conforme necessário */}
-//     </div>
-//   );
-// };
-//
-// const Page1 = () => <div>Conteúdo da Página 1</div>;
-// const Page2 = () => <div>Conteúdo da Página 2</div>;
-//
-// export default Content;

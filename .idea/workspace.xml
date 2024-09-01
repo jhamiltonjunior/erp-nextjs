@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a360120d-78e6-4cbb-8a4d-fd145362492a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/sistema/rh/treinamentos/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Accordion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Accordion/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Accordion/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Accordion/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Simple/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Simple/Card/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +42,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.15.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.15.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/is_me/.app/artificial-intelligence-image-analyzer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/is_me/.app/arp-mercado/src/app/sistema/rh&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -49,11 +54,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/sistema/rh" />
       <recent name="$PROJECT_DIR$/src/component/SelectCustom" />
       <recent name="$PROJECT_DIR$/src/component/SimpleModal" />
       <recent name="$PROJECT_DIR$/src/component/Element/CustomInput" />
       <recent name="$PROJECT_DIR$/src/component" />
-      <recent name="$PROJECT_DIR$/src/app/sistema" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/component/Vacancy" />
@@ -92,7 +97,8 @@
       <workItem from="1724703523022" duration="3207000" />
       <workItem from="1724712164387" duration="10803000" />
       <workItem from="1724790710500" duration="819000" />
-      <workItem from="1725133787549" duration="879000" />
+      <workItem from="1725133787549" duration="3524000" />
+      <workItem from="1725224315958" duration="5795000" />
     </task>
     <servers />
   </component>
