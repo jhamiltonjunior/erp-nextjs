@@ -10,6 +10,7 @@ import {Checkbox} from "@/component/ui/checkbox";
 import NormalButton from "@/component/Element/NormalButton";
 import HoverCardShadcn from "@/component/ui/hover-card";
 import React from "react";
+import Link from "next/link";
 
 export default function Line({ content, key }) {
   return (
@@ -27,17 +28,21 @@ export default function Line({ content, key }) {
 
       <section className={"justify-start w-1/3 text-gray-800 gap-3 hidden group-hover:flex"}>
         <HoverCardShadcn className={`flex gap-2 items-center`} hoverContent={"Visualizar"}>
+          <Link href={`./treinamentos/${content.link}`}>
           <NormalButton
             className={"flex items-center p-2 px-2 shadow-none max-h-[33px]"}
             icon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}/>}
-            onClick={() => alert("Por enquanto nao faço nada!")}/>
+            // onClick={() => alert("Por enquanto nao faço nada!")}
+          />
+          </Link>
         </HoverCardShadcn>
 
         <HoverCardShadcn className={`flex gap-2 items-center`} hoverContent={"Editar"}>
           <NormalButton
             className={"flex items-center p-2 px-2 shadow-none max-h-[33px]"}
             icon={<FontAwesomeIcon icon={faPenToSquare}/>}
-            onClick={() => alert("Por enquanto nao faço nada!")}/>
+            onClick={() => alert("Por enquanto nao faço nada!")}
+          />
         </HoverCardShadcn>
 
         <HoverCardShadcn className={`flex gap-2 items-center`} hoverContent={"Excluir"}>
