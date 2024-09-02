@@ -47,20 +47,14 @@ const Accordion = (props) => {
   const rh = [
     "Painel",
     "Recrutamento",
-    "Seleção",
-    "Treinamentos",
-    "Desenvolvimento de programas",
-    "Organizar entrevistas",
-    "Coordenar a contratação"
+    "Seleção & Contratação",
+    "Treinamentos & Desenvolvimento de programas",
   ];
   const rhLink = [
     "",
     "recrutamento",
     "selecao",
     "treinamentos",
-    "desenvolvimento-de-programas",
-    "organizar-entrevistas",
-    "coordenar-a-contratacao"
   ];
 
   const estoque = [

@@ -31,7 +31,7 @@ export default function Calendar({className, eventClick}) {
       event.push(
         {
           title: 'event '+ i,
-          start: '2024-08-' + day + `T${hourInitial}`
+          start: '2024-09-' + day + `T${hourInitial}`
 
         }
       )
