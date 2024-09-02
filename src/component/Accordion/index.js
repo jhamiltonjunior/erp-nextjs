@@ -3,28 +3,40 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import './style.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronUp} from "@fortawesome/free-solid-svg-icons";
 
-export const AccordionItem = ({ title, content, className}) => {
+export const AccordionItem = ({ title, content, className, classContentShow}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
+  const contentShow = title ? (
+    <>
+      <h3 className="text-lg font-semibold text-slate-950">{title}</h3>
+      <span className="text-xl text-slate-950">
+            {isOpen ? '-' : '+'}
+          </span>
+    </>
+  ) : (
+    <span className={`text-xl text-slate-950 transform duration-500 ${isOpen ? "-rotate-180" : ""}`}>
+      <FontAwesomeIcon icon={faChevronUp} />
+    </span>
+  )
+
   return (
     <div className={`border-b border-gray-200 ${className}`}>
       <button
         onClick={toggleAccordion}
-        className="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 focus:outline-none"
+        className={`w-full text-left bg-gray-100 hover:bg-gray-200 focus:outline-none ${title ? `p-4` : `p-2`}`}
       >
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-slate-950">{title}</h3>
-          <span className="text-xl text-slate-950">
-            {isOpen ? '-' : '+'}
-          </span>
+        <div className={`flex items-center ${title ? `justify-between` : `justify-center`}`}>
+          {contentShow}
         </div>
       </button>
-      <div className={`content-accordion bg-white text-slate-950 ${isOpen ? "open" : ""}`}>
+      <div className={`content-accordion bg-white text-slate-950 ${isOpen ? "open py-4" : ""}`}>
         {content}
       </div>
     </div>
