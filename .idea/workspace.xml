@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a360120d-78e6-4cbb-8a4d-fd145362492a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/Simple/Line/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/sistema/rh/treinamentos/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sistema/rh/treinamentos/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Accordion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Accordion/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Accordion/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Accordion/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <workItem from="1724712164387" duration="10803000" />
       <workItem from="1724790710500" duration="819000" />
       <workItem from="1725133787549" duration="3524000" />
-      <workItem from="1725224315958" duration="12521000" />
+      <workItem from="1725224315958" duration="12859000" />
     </task>
     <servers />
   </component>

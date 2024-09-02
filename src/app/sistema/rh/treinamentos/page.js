@@ -243,7 +243,7 @@ export default function TrainingPage() {
           {
             data.map((item, i) => (
               <Card key={i} className={`border-[var(--principal-color)] p-2`} classNameContent={`flex-wrap`}>
-                <section className={"flex gap-8 justify-between w-full items-center d"}>
+                <section className={"flex gap-8 justify-center flex-wrap sm:flex-nowrap sm:justify-between w-full items-center d"}>
                   <section className={"flex gap-6 w-full items-center"}>
                     <FontAwesomeIcon icon={faGripLines} className={`text-[${item.color}] text-2xl`}/>
 
