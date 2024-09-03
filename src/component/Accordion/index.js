@@ -58,6 +58,7 @@ const Accordion = (props) => {
   ];
 
   const estoque = [
+    "Painel",
     "Fiscalizar a entrada e saída das mercadorias",
     "Verificar a validade e o estoque dos produtos",
     "Realizar contagens físicas regulares",
@@ -67,7 +68,8 @@ const Accordion = (props) => {
   ];
 
   const estoqueLink = [
-    "Fiscalizar a entrada e saída das mercadorias",
+    "",
+    "inventarios",
     "Verificar a validade e o estoque dos produtos",
     "Realizar contagens físicas regulares",
     "Organizar o local de armazenamento",
@@ -150,7 +152,7 @@ const Accordion = (props) => {
         content={estoque.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/estoque/${estoqueLink[i]}`}
+          } key={i} href={`/sistema/estoque/${estoqueLink[i]}`}
                 onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
@@ -161,7 +163,7 @@ const Accordion = (props) => {
         content={financeiro.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/financeiro/${financeiroLink[i]}`}
+          } key={i} href={`/sistema/financeiro/${financeiroLink[i]}`}
                 onClick={() => props.setState(!props.state)}>
             {item}
           </Link>
@@ -172,7 +174,7 @@ const Accordion = (props) => {
         content={vendas.map((item, i) =>
           <Link className={
             "menu-item-a block p-4 transform transition-transform duration-500 hover:translate-x-2 hover:text-white"
-          } key={i} href={`/vendas/${vendasLink[i]}`}
+          } key={i} href={`/sistema/vendas/${vendasLink[i]}`}
                 onClick={() => props.setState(!props.state)}>
             {item}
           </Link>

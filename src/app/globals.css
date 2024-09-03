@@ -19,6 +19,8 @@ html, body {
 
 :root {
     --principal-color: #444CE6;
+    --principal-color-ligth: #7b7cc2;
+
     --secundary-color: #fc7f03;
     --principal-color-rgb: 68, 76, 230;
     --default-bg: rgb(243 244 246 / 1);
@@ -190,10 +192,24 @@ html, body {
     scrollbar-color: #e74c3c #f0f0f0;
 }
 
-span[data-state="checked"], button[data-state="checked"] {
+button[role="checkbox"][data-state="checked"] {
+    overflow: hidden;
+    border-color: var(--principal-color);
+}
+
+button[role="checkbox"] span[data-state="checked"] {
     overflow: hidden;
     background-color: var(--principal-color);
     border-color: var(--principal-color);
+}
+
+span[data-state="checked"] {
+    background-color: var(--principal-color);
+    border-color: var(--principal-color);
+}
+
+.data-\[state\=checked\]\:bg-primary[data-state="checked"] {
+    background-color: var(--principal-color-ligth) !important;
 }
 
 /*::-webkit-scrollbar-horizontal {*/
