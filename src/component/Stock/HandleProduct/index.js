@@ -5,21 +5,18 @@ import CustomTextArea from "@/component/Element/CustomTextArea";
 import NormalButton from "@/component/Element/NormalButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRotateLeft, faCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {mascaraMoeda, moneyMask} from "@/lib/moneyMask";
 import {Switch} from "@/component/ui/switch";
 import {DatePicker} from "@/component/ui/date-picker";
 
 export default function HandleProduct(props) {
+  const [isChecked, setChecked] = useState()
+
   return (
     <form className={"overflow-auto bg-white p-4 h-full max-h-screen max-w-screen"}>
       <h2 className={"text-center text-2xl font-bold font-secundary']"}>Produto</h2>
-      {/*
 
-          Esse modal será apenas um component que terá outro component dentro
-          Então devo remover as linhas abaixo e inserir {content}
-
-          */}
       <h2 className={"text-xl text-start my-5"}>1 - Informacoes do produto</h2>
       <section className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2"}>
         <CustomInput classNameContainer={"text-start"} id={"product-name"} label={"Nome"} placeholder={"Digite o nome do produto"}/>
@@ -58,20 +55,19 @@ export default function HandleProduct(props) {
           e.target.value = moneyMask(e.target.value)
         }} label={"Preco Unitario"} placeholder={"R$ 90,97"}/>
 
-
       </section>
 
       <section id={"aditional-session"}
                className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2 mt-6"}>
 
-        <label className={"flex items-center justify-start gap-2 cursor-pointer"}><Switch className={"w-10 h-3"} />Tem prazo de validade?</label>
+        <label className={"flex items-center justify-start gap-2 cursor-pointer"}><Switch className={"w-10 h-3"} onCheckedChange={setChecked} />Tem prazo de validade?</label>
 
         <label className={"flex flex-wrap"} htmlFor={"entry-date"}>Data da entrada
         </label>
 
-        <DatePicker className={"w-full"} placeholder={"Data de Validade"} id={"validity-date"}/>
+        <DatePicker disabled={!isChecked} className={"w-full"} placeholder={"Data de Validade"} id={"validity-date"}/>
 
-          <DatePicker className={"w-full"} placeholder={"Data da entrada"} id={"entry-date"}/>
+        <DatePicker className={"w-full"} placeholder={"Data da entrada"} id={"entry-date"}/>
 
       </section>
 
