@@ -21,9 +21,25 @@ export default function HandleProduct(props) {
 
           */}
       <h2 className={"text-xl text-start my-5"}>1 - Informacoes do produto</h2>
-      <section className={"grid grid-cols-1 justify-center items-start gap-2"}>
-        <CustomInput classNameContainer={"text-start"} id={"product-name"} label={"Nome"}
-                     placeholder={"Digite o nome do produto"}/>
+      <section className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2"}>
+        <CustomInput classNameContainer={"text-start"} id={"product-name"} label={"Nome"} placeholder={"Digite o nome do produto"}/>
+
+        <label htmlFor={"inventory"} className={"text-start"}> Inventário
+          <SelectCustom id={"inventory"} isClearable isCreatable classNameContent={"lg:w-[25.875rem] sm:max-w-full max-w-60 w-[21.375rem]"} placeholder={"Categoria"} options={[
+            {
+              value: 'Alimentos',
+              label: 'Alimentos'
+            },
+            {
+              value: 'Limpeza',
+              label: 'Limpeza'
+            },
+            {
+              value: 'Higiene',
+              label: 'Higiene'
+            }]}/>
+        </label>
+
       </section>
 
       <section className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2 mt-6 gap-y-6"}>
@@ -31,7 +47,7 @@ export default function HandleProduct(props) {
                      placeholder={"Quantidade minima aceitavel"}/>
 
 
-        <CustomInput disabled={true} classNameContainer={"text-start"} type={"number"} id={"max-level"} label={"Nivel Desejavel (%)"}
+        <CustomInput classNameContainer={"text-start"} type={"number"} id={"max-level"} label={"Nivel Desejavel (%)"}
                      placeholder={"Quantidade Desejavel (% a mais que a desejavel)"}/>
 
         <CustomInput classNameContainer={"text-start"} id={"unit-cost"} onChange={(e) => {
