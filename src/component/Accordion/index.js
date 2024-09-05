@@ -59,8 +59,8 @@ const Accordion = (props) => {
 
   const estoque = [
     "Painel",
-    "Fiscalizar a entrada e saída das mercadorias",
-    "Verificar a validade e o estoque dos produtos",
+    "Entrada e Saída",
+    "Controle de Estoque",
     "Realizar contagens físicas regulares",
     "Organizar o local de armazenamento",
     "Recepcionar as mercadorias",
@@ -69,8 +69,8 @@ const Accordion = (props) => {
 
   const estoqueLink = [
     "",
-    "inventarios",
-    "Verificar a validade e o estoque dos produtos",
+    "produtos",
+    "controle",
     "Realizar contagens físicas regulares",
     "Organizar o local de armazenamento",
     "Recepcionar as mercadorias",
