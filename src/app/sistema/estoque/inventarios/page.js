@@ -25,6 +25,7 @@ import {Checkbox} from "@/component/ui/checkbox";
 import HoverCardShadcn, {HoverCard, HoverCardContent, HoverCardTrigger} from "@/component/ui/hover-card";
 import Line from "@/component/Simple/Line";
 import HandleProduct from "@/component/Stock/HandleProduct";
+import Image from "next/image";
 // import { Metadata } from 'next'
 //
 // export const metadata = {
@@ -39,49 +40,70 @@ export default function TrainingPage() {
       text: "Arroz",
       description: "Processos seletivos em andamento",
       icon: faFilter,
-      color: "blue-500"
+      color: "blue-500",
+      inventory: "Alimentos",
+      price: "R$ 46,40",
+      image: "abobora.jpg",
     },
     {
       n: 10,
       text: "Café",
       description: "Vagas disponíveis",
       icon: faPlus,
-      color: "green-500"
+      color: "green-500",
+      inventory: "Alimentos",
+      price: "R$ 46,40",
+      image: "trigo.jpg",
     },
     {
       n: 5,
       text: "Feijão",
       description: "Processos seletivos finalizados",
       icon: faFilter,
-      color: "red-500"
+      color: "red-500",
+      inventory: "Alimentos",
+      price: "R$ 69,40",
+      image: "alho.jpg",
     },
     {
       n: 1,
       text: "Açúcar",
       description: "Processo seletivo em andamento",
       icon: faFilter,
-      color: "blue-500"
+      color: "blue-500",
+      inventory: "Alimentos",
+      price: "R$ 38,30",
+      image: "morango.jpg",
     },
     {
       n: 1,
       text: "Óleo",
       description: "Processo seletivo finalizado",
       icon: faFilter,
-      color: "red-500"
+      color: "red-500",
+      inventory: "Alimentos",
+      price: "R$ 90,40",
+      image: "kit-comida.jpg",
     },
     {
       n: 1,
       text: "Sal",
       description: "<p>Processo seletivo em andamento</p>",
       icon: faFilter,
-      color: "blue-500"
+      color: "blue-500",
+      inventory: "Alimentos",
+      price: "R$ 46,40",
+      image: "cenoura.jpg",
     },
     {
       n: 1,
       text: "Macarrão",
       description: "Processo seletivo finalizado",
       icon: faFilter,
-      color: "red-500"
+      color: "red-500",
+      inventory: "Alimentos",
+      price: "R$ 46,40",
+      image: "banana-verde.jpg"
     }
   ];
 
@@ -119,10 +141,17 @@ export default function TrainingPage() {
           {
             data.map((item, i) => (
               <Card key={i} className={`border-[var(--principal-color)] p-2`} classNameContent={`flex-wrap`}>
+                <section className={"flex gap-6 w-full min-h-40 items-center relative"}>
+                  <Image
+                    src={`/stock/${item.image}`}
+                    alt="Descrição da imagem"
+                    layout="fill" // Preenche o contêiner
+                    objectFit="cover" // Ajuste a imagem para cobrir o contêiner
+                  />
+                </section>
                 <section className={"flex gap-8 justify-center flex-wrap sm:flex-nowrap sm:justify-between w-full items-center d"}>
-                  <section className={"flex gap-6 w-full items-center"}>
-                    <FontAwesomeIcon icon={faCubes} className={`text-[${item.color}] text-xl`}/>
-
+                  <section className={"flex gap-6 w-full items-center relative"}>
+                    {/*<FontAwesomeIcon icon={faCubes} className={`text-[${item.color}] text-xl`}/>*/}
                     <Checkbox />
 
                     <section className={"flex items-start flex-wrap"}>
@@ -132,16 +161,27 @@ export default function TrainingPage() {
 
                   <section className={"flex justify-end w-1/2 gap-3"}>
                     <NormalButton
-                      className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
+                      className={"flex items-center gap-2 hover:bg-[var(--principal-color)] hover:text-white bg-white border-solid border border-[var(--principal-color)] p-2 text-[var(--principal-color)] px-2 max-h-[33px]"}
                       icon={<FontAwesomeIcon icon={faPenToSquare}/>}
                       text={<p>Editar</p>}
                       onClick={() => alert("Por enquanto nao faço nada!")}/>
 
                     <NormalButton
-                      className={"flex items-center gap-2 bg-red-600 text-white px-2 max-h-[33px]"}
+                      className={"flex items-center gap-2 hover:bg-red-600 text-red-600 border-red-600 border hover:text-white px-2 max-h-[33px]"}
                       icon={<FontAwesomeIcon icon={faTrashCan}/>}
                       text={<p>Excluir</p>}
                       onClick={() => alert("Por enquanto nao faço nada!")}/>
+                  </section>
+                </section>
+                <section className={"flex justify-between w-full"}>
+                  {/*<section>*/}
+                  {/*  <p>Inventario: <span className={"text-xl"}>{item.inventory}</span></p>*/}
+                  {/*</section>*/}
+
+                  <section>
+
+                    <p className={"text-start text-sm"}>De: <span className={"text-red-600 line-through"}>{item.price}</span></p>
+                    <p>Por: <span className={"text-2xl text-emerald-700"}>{item.price}</span></p>
                   </section>
                 </section>
               </Card>
