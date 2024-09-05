@@ -148,6 +148,9 @@ export default function TrainingPage() {
                     layout="fill" // Preenche o contêiner
                     objectFit="cover" // Ajuste a imagem para cobrir o contêiner
                   />
+                  <section className={"bg-red-500 rounded p-1 z-50 text-white absolute top-2 left-2"}>
+                    <p>30% OFF</p>
+                  </section>
                 </section>
                 <section className={"flex gap-8 justify-center flex-wrap sm:flex-nowrap sm:justify-between w-full items-center d"}>
                   <section className={"flex gap-6 w-full items-center relative"}>
