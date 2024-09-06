@@ -566,12 +566,12 @@ export default function TrainingPage() {
             text={<p>Filtrar</p>}
             onClick={() => setVisibleFilter(!visibleFilter)}/>
 
-          <NormalButton
+          {/*<NormalButton*/}
 
-            className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}
-            icon={<FontAwesomeIcon icon={faPlus} />}
-            text={<p>Novo Produto</p>}
-            onClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)}/>
+          {/*  className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}*/}
+          {/*  icon={<FontAwesomeIcon icon={faPlus} />}*/}
+          {/*  text={<p>Novo Produto</p>}*/}
+          {/*  onClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)}/>*/}
         </section>
         {
           visibleFilter && (

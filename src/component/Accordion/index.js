@@ -60,7 +60,8 @@ const Accordion = (props) => {
   const estoque = [
     "Painel",
     "Entrada e Saída",
-    "Controle de Estoque",
+    "Controle Financeiro",
+    "Controle de Validade",
     "Realizar contagens físicas regulares",
     "Organizar o local de armazenamento",
     "Recepcionar as mercadorias",
@@ -70,7 +71,8 @@ const Accordion = (props) => {
   const estoqueLink = [
     "",
     "produtos",
-    "controle",
+    "controle-financeiro",
+    "controle-de-validade",
     "Realizar contagens físicas regulares",
     "Organizar o local de armazenamento",
     "Recepcionar as mercadorias",
