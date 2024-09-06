@@ -60,11 +60,9 @@ export default function TrainingPage() {
       estoqueAtual: 182,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '46.40', // custo unitário em R$
-      custoTotal: (46.40 * 429).toFixed(2), // custo total = custo unitário * quantidade de entradas
-      precoUnitario: '78.00', // preço unitário em R$
-      precoTotal: (78.00 * 303).toFixed(2), // preço total = preço unitário * quantidade de saídas
-      lucro: (78.00 * 303 - 46.40 * 429).toFixed(2), // lucro = preço total - custo total
+      validade: "10/10/2024",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -80,11 +78,9 @@ export default function TrainingPage() {
       estoqueAtual: 150,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '46.40',
-      custoTotal: (46.40 * 500).toFixed(2),
-      precoUnitario: '90.00',
-      precoTotal: (90.00 * 300).toFixed(2),
-      lucro: (90.00 * 300 - 46.40 * 500).toFixed(2),
+      validade: "10/09/2024",
+      estadoValidade: "Próximo",
+      statusDataValidade: mediumStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -100,11 +96,9 @@ export default function TrainingPage() {
       estoqueAtual: 250,
       estadoEstoque: "Alto",
       status: highStatusClass,
-      custoUnitario: '69.40',
-      custoTotal: (69.40 * 600).toFixed(2),
-      precoUnitario: '100.00',
-      precoTotal: (100.00 * 400).toFixed(2),
-      lucro: (100.00 * 400 - 69.40 * 600).toFixed(2),
+      validade: "06/08/2024",
+      estadoValidade: "Muito Próximo",
+      statusDataValidade: lowStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -120,11 +114,9 @@ export default function TrainingPage() {
       estoqueAtual: 180,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '38.30',
-      custoTotal: (38.30 * 300).toFixed(2),
-      precoUnitario: '70.00',
-      precoTotal: (70.00 * 200).toFixed(2),
-      lucro: (70.00 * 200 - 38.30 * 300).toFixed(2),
+      validade: "06/12/2024",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -141,10 +133,9 @@ export default function TrainingPage() {
       estadoEstoque: "Baixo",
       status: lowStatusClass,
       custoUnitario: '90.40',
-      custoTotal: (90.40 * 200).toFixed(2),
-      precoUnitario: '150.00',
-      precoTotal: (150.00 * 100).toFixed(2),
-      lucro: (150.00 * 100 - 90.40 * 200).toFixed(2),
+      validade: "06/08/2024",
+      estadoValidade: "Muito Próximo",
+      statusDataValidade: lowStatusClass,
       unidade: "L",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -160,11 +151,9 @@ export default function TrainingPage() {
       estoqueAtual: 182,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '46.40', // custo unitário em R$
-      custoTotal: (46.40 * 429).toFixed(2), // custo total = custo unitário * quantidade de entradas
-      precoUnitario: '78.00', // preço unitário em R$
-      precoTotal: (78.00 * 303).toFixed(2), // preço total = preço unitário * quantidade de saídas
-      lucro: (78.00 * 303 - 46.40 * 429).toFixed(2), // lucro = preço total - custo total
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -180,11 +169,9 @@ export default function TrainingPage() {
       estoqueAtual: 150,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '46.40',
-      custoTotal: (46.40 * 500).toFixed(2),
-      precoUnitario: '90.00',
-      precoTotal: (90.00 * 300).toFixed(2),
-      lucro: (90.00 * 300 - 46.40 * 500).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -200,11 +187,9 @@ export default function TrainingPage() {
       estoqueAtual: 250,
       estadoEstoque: "Alto",
       status: highStatusClass,
-      custoUnitario: '69.40',
-      custoTotal: (69.40 * 600).toFixed(2),
-      precoUnitario: '100.00',
-      precoTotal: (100.00 * 400).toFixed(2),
-      lucro: (100.00 * 400 - 69.40 * 600).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -220,11 +205,9 @@ export default function TrainingPage() {
       estoqueAtual: 180,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '38.30',
-      custoTotal: (38.30 * 300).toFixed(2),
-      precoUnitario: '70.00',
-      precoTotal: (70.00 * 200).toFixed(2),
-      lucro: (70.00 * 200 - 38.30 * 300).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -240,11 +223,9 @@ export default function TrainingPage() {
       estoqueAtual: 100,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '90.40',
-      custoTotal: (90.40 * 200).toFixed(2),
-      precoUnitario: '150.00',
-      precoTotal: (150.00 * 100).toFixed(2),
-      lucro: (150.00 * 100 - 90.40 * 200).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "L",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -260,11 +241,9 @@ export default function TrainingPage() {
       estoqueAtual: 182,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '46.40', // custo unitário em R$
-      custoTotal: (46.40 * 429).toFixed(2), // custo total = custo unitário * quantidade de entradas
-      precoUnitario: '78.00', // preço unitário em R$
-      precoTotal: (78.00 * 303).toFixed(2), // preço total = preço unitário * quantidade de saídas
-      lucro: (78.00 * 303 - 46.40 * 429).toFixed(2), // lucro = preço total - custo total
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -280,11 +259,9 @@ export default function TrainingPage() {
       estoqueAtual: 150,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '46.40',
-      custoTotal: (46.40 * 500).toFixed(2),
-      precoUnitario: '90.00',
-      precoTotal: (90.00 * 300).toFixed(2),
-      lucro: (90.00 * 300 - 46.40 * 500).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -300,11 +277,9 @@ export default function TrainingPage() {
       estoqueAtual: 250,
       estadoEstoque: "Alto",
       status: highStatusClass,
-      custoUnitario: '69.40',
-      custoTotal: (69.40 * 600).toFixed(2),
-      precoUnitario: '100.00',
-      precoTotal: (100.00 * 400).toFixed(2),
-      lucro: (100.00 * 400 - 69.40 * 600).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -320,11 +295,9 @@ export default function TrainingPage() {
       estoqueAtual: 180,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '38.30',
-      custoTotal: (38.30 * 300).toFixed(2),
-      precoUnitario: '70.00',
-      precoTotal: (70.00 * 200).toFixed(2),
-      lucro: (70.00 * 200 - 38.30 * 300).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -340,11 +313,9 @@ export default function TrainingPage() {
       estoqueAtual: 100,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '90.40',
-      custoTotal: (90.40 * 200).toFixed(2),
-      precoUnitario: '150.00',
-      precoTotal: (150.00 * 100).toFixed(2),
-      lucro: (150.00 * 100 - 90.40 * 200).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "L",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -360,11 +331,9 @@ export default function TrainingPage() {
       estoqueAtual: 182,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '46.40', // custo unitário em R$
-      custoTotal: (46.40 * 429).toFixed(2), // custo total = custo unitário * quantidade de entradas
-      precoUnitario: '78.00', // preço unitário em R$
-      precoTotal: (78.00 * 303).toFixed(2), // preço total = preço unitário * quantidade de saídas
-      lucro: (78.00 * 303 - 46.40 * 429).toFixed(2), // lucro = preço total - custo total
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -380,11 +349,9 @@ export default function TrainingPage() {
       estoqueAtual: 150,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '46.40',
-      custoTotal: (46.40 * 500).toFixed(2),
-      precoUnitario: '90.00',
-      precoTotal: (90.00 * 300).toFixed(2),
-      lucro: (90.00 * 300 - 46.40 * 500).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -400,11 +367,9 @@ export default function TrainingPage() {
       estoqueAtual: 250,
       estadoEstoque: "Alto",
       status: highStatusClass,
-      custoUnitario: '69.40',
-      custoTotal: (69.40 * 600).toFixed(2),
-      precoUnitario: '100.00',
-      precoTotal: (100.00 * 400).toFixed(2),
-      lucro: (100.00 * 400 - 69.40 * 600).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -420,11 +385,9 @@ export default function TrainingPage() {
       estoqueAtual: 180,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '38.30',
-      custoTotal: (38.30 * 300).toFixed(2),
-      precoUnitario: '70.00',
-      precoTotal: (70.00 * 200).toFixed(2),
-      lucro: (70.00 * 200 - 38.30 * 300).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -440,11 +403,9 @@ export default function TrainingPage() {
       estoqueAtual: 100,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '90.40',
-      custoTotal: (90.40 * 200).toFixed(2),
-      precoUnitario: '150.00',
-      precoTotal: (150.00 * 100).toFixed(2),
-      lucro: (150.00 * 100 - 90.40 * 200).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "L",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -460,11 +421,9 @@ export default function TrainingPage() {
       estoqueAtual: 182,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '46.40', // custo unitário em R$
-      custoTotal: (46.40 * 429).toFixed(2), // custo total = custo unitário * quantidade de entradas
-      precoUnitario: '78.00', // preço unitário em R$
-      precoTotal: (78.00 * 303).toFixed(2), // preço total = preço unitário * quantidade de saídas
-      lucro: (78.00 * 303 - 46.40 * 429).toFixed(2), // lucro = preço total - custo total
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -480,11 +439,9 @@ export default function TrainingPage() {
       estoqueAtual: 150,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '46.40',
-      custoTotal: (46.40 * 500).toFixed(2),
-      precoUnitario: '90.00',
-      precoTotal: (90.00 * 300).toFixed(2),
-      lucro: (90.00 * 300 - 46.40 * 500).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -500,11 +457,9 @@ export default function TrainingPage() {
       estoqueAtual: 250,
       estadoEstoque: "Alto",
       status: highStatusClass,
-      custoUnitario: '69.40',
-      custoTotal: (69.40 * 600).toFixed(2),
-      precoUnitario: '100.00',
-      precoTotal: (100.00 * 400).toFixed(2),
-      lucro: (100.00 * 400 - 69.40 * 600).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "KG",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -520,11 +475,9 @@ export default function TrainingPage() {
       estoqueAtual: 180,
       estadoEstoque: "Médio",
       status: mediumStatusClass,
-      custoUnitario: '38.30',
-      custoTotal: (38.30 * 300).toFixed(2),
-      precoUnitario: '70.00',
-      precoTotal: (70.00 * 200).toFixed(2),
-      lucro: (70.00 * 200 - 38.30 * 300).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "UN",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -540,11 +493,9 @@ export default function TrainingPage() {
       estoqueAtual: 100,
       estadoEstoque: "Baixo",
       status: lowStatusClass,
-      custoUnitario: '90.40',
-      custoTotal: (90.40 * 200).toFixed(2),
-      precoUnitario: '150.00',
-      precoTotal: (150.00 * 100).toFixed(2),
-      lucro: (150.00 * 100 - 90.40 * 200).toFixed(2),
+      validade: "06/01/2025",
+      estadoValidade: "OK",
+      statusDataValidade: highStatusClass,
       unidade: "L",
       statusLucro: function() {
         return this.lucro > 0 ? highStatusClass : lowStatusClass
@@ -597,9 +548,8 @@ export default function TrainingPage() {
                 <TableHead>Estoque Desejado</TableHead>
                 <TableHead>Estoque Atual</TableHead>
                 <TableHead>Estado do Estoque</TableHead>
-                <TableHead>Custo Atual</TableHead>
-                <TableHead>Preço Total</TableHead>
-                <TableHead>Lucro</TableHead>
+                <TableHead>Validade</TableHead>
+                <TableHead>Estado Validade</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -618,17 +568,12 @@ export default function TrainingPage() {
                     <TableCell>{item.estoqueAtual}</TableCell> {/* Estoque Atual */}
                     <TableCell className={item.status}>{item.estadoEstoque}</TableCell> {/* Estado do Estoque */}
                     <TableCell>
-                      <HoverCardShadcn className={`flex gap-2 items-center w-full h-full`} hoverContent={`Custo Unitario ${moneyMask(item.custoUnitario)}`}>
-                        R$ {moneyMask(item.custoTotal)}
-                      </HoverCardShadcn>
+                        {item.validade}
                     </TableCell>
-                    <TableCell>
-                      {/**/}
-                      <HoverCardShadcn className={`flex gap-2 items-center`} hoverContent={`Preco Unitario ${moneyMask(item.precoUnitario)}`}>
-                        {moneyMask(item.precoTotal)}
-                      </HoverCardShadcn>
+                    <TableCell className={item.statusDataValidade}>
+                        {item.estadoValidade}
                     </TableCell>
-                    <TableCell className={item.statusLucro()}>{moneyMask(item.lucro)}</TableCell> {/* Lucro */}
+                    {/*<TableCell className={item.statusLucro()}>{item.statusDataValidade}</TableCell> /!* Lucro *!/*/}
                   </TableRow>
                 ))
               }
