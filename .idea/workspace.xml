@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a360120d-78e6-4cbb-8a4d-fd145362492a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/sistema/estoque/controle/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +36,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "20.15.1",
     "javascript.nodejs.core.library.typings.version": "20.15.0",
-    "last_opened_file_path": "/home/is_me/.app/arp-mercado/public/stock",
+    "last_opened_file_path": "/home/is_me/.app/arp-mercado/src/app/sistema/estoque",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,9 +48,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/sistema/estoque" />
       <recent name="$PROJECT_DIR$/public/stock" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/app/sistema/estoque" />
       <recent name="$PROJECT_DIR$/src/app/sistema/rh" />
       <recent name="$PROJECT_DIR$/src/component/SelectCustom" />
     </key>
@@ -94,6 +95,7 @@
       <workItem from="1725224315958" duration="13698000" />
       <workItem from="1725309826534" duration="11794000" />
       <workItem from="1725495499498" duration="4754000" />
+      <workItem from="1725579062941" duration="7373000" />
     </task>
     <servers />
   </component>
