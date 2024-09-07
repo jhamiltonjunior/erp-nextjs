@@ -42,6 +42,10 @@ import SelectCustom from "@/component/Element/SelectCustom";
 // export const metadata = {
 //   title: 'Dashboard'
 // }
+const lowStatusClass = "bg-red-200 text-red-600"
+const mediumStatusClass = "bg-orange-100 text-orange-700"
+const highStatusClass = "bg-blue-100 text-blue-600"
+
 export default function EntriesAndExitsPage() {
   const [visibleFilter, setVisibleFilter] = useState(false);
   const [visibleModalHandleVacancy, setVisibleModalHandleVacancy] = useState(false);
@@ -50,11 +54,6 @@ export default function EntriesAndExitsPage() {
   useEffect(() => {
     console.log(table)
   }, [table]);
-
-
-  const lowStatusClass = "bg-red-200 text-red-600"
-  const mediumStatusClass = "bg-orange-100 text-orange-700"
-  const highStatusClass = "bg-blue-100 text-blue-600"
 
   const data = [
     {
@@ -774,7 +773,11 @@ function TableComponent(thead, data, type = "") {
               <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
               {
                 type === "all" && (
-                  <TableCell>{item.type}</TableCell>
+                  <TableCell className={
+                    item.type === "Entrada" ?
+                      lowStatusClass :
+                      highStatusClass
+                  }>{item.type}</TableCell>
                 )
               }
               <TableCell className="font-medium">{item.data}</TableCell> {/* Produto */}
