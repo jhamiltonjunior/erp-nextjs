@@ -40,8 +40,6 @@ export default function HandleProduct(props) {
       </section>
 
       <section className={"grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-2 mt-6 gap-y-6"}>
-        {/*<CustomInput classNameContainer={"text-start"} type={"number"} id={"min-level"} label={"Quantidade"}*/}
-        {/*             placeholder={"Quantidade de itens que entrou"}/>*/}
 
         <CustomInput classNameContainer={"text-start"} type={"number"} id={"min-level"} label={"Nivel Minimo"}
                      placeholder={"Quantidade minima aceitavel"}/>

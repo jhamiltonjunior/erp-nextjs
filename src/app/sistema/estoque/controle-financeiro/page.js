@@ -589,17 +589,14 @@ export default function TrainingPage() {
             <TableHeader className={"sticky z-10 top-0 bg-white"}>
               <TableRow>
                 <TableHead> </TableHead>
-                <TableHead>Produtos</TableHead>
-                <TableHead>Un. Medida</TableHead>
-                <TableHead>Entrada</TableHead>
-                <TableHead>Saída</TableHead>
-                <TableHead>Estoque Mínimo</TableHead>
-                <TableHead>Estoque Desejado</TableHead>
-                <TableHead>Estoque Atual</TableHead>
-                <TableHead>Estado do Estoque</TableHead>
-                <TableHead>Custo Atual</TableHead>
-                <TableHead>Preço Total</TableHead>
-                <TableHead>Lucro</TableHead>
+                <TableHead className={"text-center"}>Produtos</TableHead>
+                <TableHead className={"text-center"}>Entrada</TableHead>
+                <TableHead className={"text-center"}>Saída</TableHead>
+                <TableHead className={"text-center"}>Custo Unitario</TableHead>
+                <TableHead className={"text-center"}>Preco Unitario</TableHead>
+                <TableHead className={"text-center"}>Custo Atual</TableHead>
+                <TableHead className={"text-center"}>Preço Total</TableHead>
+                <TableHead className={"text-center"}>Lucro</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -610,25 +607,17 @@ export default function TrainingPage() {
                       <Checkbox />
                     </TableCell>
                     <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
-                    <TableCell className="font-medium">{item.unidade}</TableCell> {/* Produto */}
                     <TableCell>{item.entrada}</TableCell> {/* Entrada */}
                     <TableCell>{item.saida}</TableCell> {/* Saída */}
-                    <TableCell>{item.estoqueMinimo}</TableCell> {/* Estoque Mínimo */}
-                    <TableCell>{item.estoqueDesejado}</TableCell> {/* Estoque Desejado */}
-                    <TableCell>{item.estoqueAtual}</TableCell> {/* Estoque Atual */}
-                    <TableCell className={item.status}>{item.estadoEstoque}</TableCell> {/* Estado do Estoque */}
-                    <TableCell>
-                      <HoverCardShadcn className={`flex gap-2 items-center w-full h-full`} hoverContent={`Custo Unitario ${moneyMask(item.custoUnitario)}`}>
+                    <TableCell>{moneyMask(item.custoUnitario)}</TableCell> {/* Estoque Mínimo */}
+                    <TableCell>{moneyMask(item.precoUnitario)}</TableCell> {/* Estoque Desejado */}
+                    <TableCell className={"text-center"}>
                         R$ {moneyMask(item.custoTotal)}
-                      </HoverCardShadcn>
                     </TableCell>
-                    <TableCell>
-                      {/**/}
-                      <HoverCardShadcn className={`flex gap-2 items-center`} hoverContent={`Preco Unitario ${moneyMask(item.precoUnitario)}`}>
+                    <TableCell className={"text-center"}>
                         {moneyMask(item.precoTotal)}
-                      </HoverCardShadcn>
                     </TableCell>
-                    <TableCell className={item.statusLucro()}>{moneyMask(item.lucro)}</TableCell> {/* Lucro */}
+                    <TableCell className={item.statusLucro() + ' text-center'}>{moneyMask(item.lucro)}</TableCell> {/* Lucro */}
                   </TableRow>
                 ))
               }
