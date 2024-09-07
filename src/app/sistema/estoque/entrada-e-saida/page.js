@@ -608,11 +608,62 @@ export default function EntriesAndExitsPage() {
       dataVenda: "10/10/2021",
     },
   ];
+  const tableHeadsEntry = [
+    { text: "Produtos" },
+    { text: "Data" },
+    { text: "Quantidade" },
+    { text: "Custo Unitario" },
+    { text: "Custo Total" }
+  ];
+  const tableHeadsExits = [
+    { text: "Produtos" },
+    { text: "Data" },
+    { text: "Quantidade" },
+    { text: "Preco Unitario" },
+    { text: "Preço Total" }
+  ];
+  const tableHeadsAll = [
+    { text: "Produtos" },
+    { text: "Data" },
+    { text: "Tipo" },
+    { text: "Quantidade" },
+    { text: "ValorUnitario" },
+    { text: "Valor Total" },
+  ];
+
+
+  const entries = data.map((value) => {
+    return {
+      text: value.text,
+      type: "Entrada",
+      data: value.dataEntrada,
+      quantidade: value.entrada,
+      unitario: value.custoUnitario,
+      total: value.custoTotal
+    }
+  })
+
+  const exits = data.map((value) => {
+    return {
+      text: value.text,
+      type: "Saida",
+      data: value.dataVenda,
+      quantidade: value.saida,
+      unitario: value.precoUnitario,
+      total: value.precoTotal
+    }
+  })
+
+  const all = [...entries, ...exits];
+
 
   const optionsTables = [
     { value: 'entrada', label: 'Entrada' },
     { value: 'saida', label: 'Saida' },
+    { value: 'todas', label: 'Todas' },
   ];
+
+  // aqui
 
 
   return (
@@ -622,7 +673,7 @@ export default function EntriesAndExitsPage() {
           <section>
           <SelectCustom
             setSelectedOption={setTable}
-            className={"h-full max-w-[175px] min-w-full"} placeholder={"Todas as areas"} options={optionsTables} isMulti />
+            className={"h-full max-w-[175px] min-w-full"} defaultValue={table} options={optionsTables} isMulti />
 
           </section>
 
@@ -652,8 +703,9 @@ export default function EntriesAndExitsPage() {
           setIsOpen={setVisibleModalHandleVacancy}/>
 
         <section className={"grid gap-4 w-full grid-cols-1 overflow-y-auto max-h-[88vh] h-[88vh] relative"}>
-
-          {table === 'entrada' ? TableEntries(data) : TableExits(data)}
+          {table === 'entrada' && TableComponent(tableHeadsEntry, entries)}
+          {table === 'saida' && TableComponent(tableHeadsExits, exits)}
+          {table === 'todas' && TableComponent(tableHeadsAll, all, "all")}
 
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
             <PaginationContent className="flex items-center space-x-1">
@@ -688,7 +740,6 @@ export default function EntriesAndExitsPage() {
             </PaginationContent>
           </Pagination>
 
-
         </section>
 
         {/*<Calendar eventClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)} />*/}
@@ -700,17 +751,17 @@ export default function EntriesAndExitsPage() {
   );
 }
 
-function TableEntries(data) {
+function TableComponent(thead, data, type = "") {
   return (
     <Table className={"bg-white"}>
       <TableHeader className={"sticky z-10 top-0 bg-white"}>
         <TableRow>
           <TableHead> </TableHead>
-          <TableHead className={"text-center"}>Produtos</TableHead>
-          <TableHead className={"text-center"}>Data</TableHead>
-          <TableHead className={"text-center"}>Quantidade</TableHead>
-          <TableHead className={"text-center"}>Custo Unitario</TableHead>
-          <TableHead className={"text-center"}>Custo Total</TableHead>
+          {
+            thead.map((item, i) => (
+              <TableHead key={i} className={"text-center"}>{item.text}</TableHead>
+            ))
+          }
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -721,47 +772,16 @@ function TableEntries(data) {
                 <Checkbox />
               </TableCell>
               <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
-              <TableCell className="font-medium">{item.dataEntrada}</TableCell> {/* Produto */}
-              <TableCell>{item.entrada}</TableCell> {/* Entrada */}
-              <TableCell>{moneyMask(item.custoUnitario)}</TableCell> {/* Estoque Mínimo */}
+              {
+                type === "all" && (
+                  <TableCell>{item.type}</TableCell>
+                )
+              }
+              <TableCell className="font-medium">{item.data}</TableCell> {/* Produto */}
+              <TableCell>{item.quantidade}</TableCell> {/* Entrada */}
+              <TableCell>{moneyMask(item.unitario)}</TableCell> {/* Estoque Mínimo */}
               <TableCell className={"text-center"}>
-                R$ {moneyMask(item.custoTotal)}
-              </TableCell>
-            </TableRow>
-          ))
-        }
-      </TableBody>
-    </Table>
-  )
-}
-
-
-function TableExits(data) {
-  return (
-    <Table className={"bg-white"}>
-      <TableHeader className={"sticky z-10 top-0 bg-white"}>
-        <TableRow>
-          <TableHead> </TableHead>
-          <TableHead className={"text-center"}>Produtos</TableHead>
-          <TableHead className={"text-center"}>Data</TableHead>
-          <TableHead className={"text-center"}>Quantidade</TableHead>
-          <TableHead className={"text-center"}>Preco Unitario</TableHead>
-          <TableHead className={"text-center"}>Preço Total</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {
-          data.map((item, i) => (
-            <TableRow key={i} className={i % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
-              <TableCell className="font-medium">
-                <Checkbox />
-              </TableCell>
-              <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
-              <TableCell className="font-medium">{item.dataVenda}</TableCell> {/* Produto */}
-              <TableCell>{item.saida}</TableCell> {/* Saída */}
-              <TableCell>{moneyMask(item.precoUnitario)}</TableCell> {/* Estoque Desejado */}
-              <TableCell className={"text-center"}>
-                {moneyMask(item.precoTotal)}
+                {moneyMask(item.total)}
               </TableCell>
             </TableRow>
           ))

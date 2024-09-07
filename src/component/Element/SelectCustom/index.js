@@ -27,6 +27,7 @@ import {
 const SelectCustom = (props) => {
   const [value, setValue] = useState("");
   const isCreatable = props?.isCreatable
+  console.log(props)
 
   return (
       isCreatable ? (
@@ -41,7 +42,7 @@ const SelectCustom = (props) => {
             className={`w-[160px] rounded-lg sm:ml-auto ${props.className}`}
             aria-label={props.placeholder}
           >
-            <SelectValue placeholder={props.placeholder} />
+            <SelectValue defaultValue={props.defaultValue || undefined} placeholder={props.placeholder} />
           </SelectTrigger>
           <SelectContent className="rounded-xl">
 
