@@ -540,16 +540,16 @@ export default function TrainingPage() {
             <TableHeader className={"sticky z-10 top-0 bg-white"}>
               <TableRow>
                 <TableHead> </TableHead>
-                <TableHead>Produtos</TableHead>
-                <TableHead>Un. Medida</TableHead>
-                <TableHead>Entrada</TableHead>
-                <TableHead>Saída</TableHead>
-                <TableHead>Estoque Mínimo</TableHead>
-                <TableHead>Estoque Desejado</TableHead>
-                <TableHead>Estoque Atual</TableHead>
-                <TableHead>Estado do Estoque</TableHead>
-                <TableHead>Validade</TableHead>
-                <TableHead>Estado Validade</TableHead>
+                <TableHead className="text-center">Produtos</TableHead>
+                <TableHead className="text-center">Un. Medida</TableHead>
+                <TableHead className="text-center">Entrada</TableHead>
+                <TableHead className="text-center">Saída</TableHead>
+                <TableHead className="text-center">Estoque Mínimo</TableHead>
+                <TableHead className="text-center">Estoque Desejado</TableHead>
+                <TableHead className="text-center">Estoque Atual</TableHead>
+                <TableHead className="text-center">Estado do Estoque</TableHead>
+                <TableHead className="text-center">Validade</TableHead>
+                <TableHead className="text-center">Estado Validade</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -561,7 +561,7 @@ export default function TrainingPage() {
                     </TableCell>
                     <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
                     <TableCell className="font-medium">{item.unidade}</TableCell> {/* Produto */}
-                    <TableCell>{item.entrada}</TableCell> {/* Entrada */}
+                    <TableCell className="text-center">{item.entrada}</TableCell> {/* Entrada */}
                     <TableCell>{item.saida}</TableCell> {/* Saída */}
                     <TableCell>{item.estoqueMinimo}</TableCell> {/* Estoque Mínimo */}
                     <TableCell>{item.estoqueDesejado}</TableCell> {/* Estoque Desejado */}
@@ -577,6 +577,17 @@ export default function TrainingPage() {
                   </TableRow>
                 ))
               }
+              <TableRow className={"sticky z-10 bottom-0  bg-white"}>
+                <TableCell className={' text-center'} colSpan={2}></TableCell>
+
+                <TableCell className={' text-center'}>{"4.234,00"}</TableCell>
+                <TableCell className={' text-center'}>{"3.090,00"}</TableCell>
+                <TableCell className={' text-center'}>{"1.987,03"}</TableCell>
+                <TableCell className={' text-center'}>{"1.293,02"}</TableCell>
+                <TableCell className={' text-center'}>{"2.023,92"}</TableCell>
+                <TableCell className={' text-center'}>{"6.092,09"}</TableCell>
+                <TableCell className={' text-center'} colSpan={3}></TableCell>
+              </TableRow>
             </TableBody>
           </Table>
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
