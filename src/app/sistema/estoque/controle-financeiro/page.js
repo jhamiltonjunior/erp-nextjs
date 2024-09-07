@@ -599,7 +599,7 @@ export default function TrainingPage() {
                 <TableHead className={"text-center"}>Lucro</TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody>
+            <TableBody className={"relative"}>
                 {
                 data.map((item, i) => (
                   <TableRow key={i} className={i % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
@@ -621,6 +621,19 @@ export default function TrainingPage() {
                   </TableRow>
                 ))
               }
+
+              <TableRow className={"sticky z-10 bottom-0  bg-white"}>
+                <TableCell className={' text-center'} colSpan={2}></TableCell>
+
+                <TableCell className={' text-center'}>{"4.234,00"}</TableCell>
+                <TableCell className={' text-center'}>{"3.090,00"}</TableCell>
+                <TableCell className={' text-center'}>{"R$ 51.987,03"}</TableCell>
+                <TableCell className={' text-center'}>{"R$ 110.293,02"}</TableCell>
+                <TableCell className={' text-center'}>{"R$ 302.023,92"}</TableCell>
+                <TableCell className={' text-center'}>{"R$ 632.092,09"}</TableCell>
+                <TableCell className={' text-center ' + highStatusClass}>{"R$ 330.068,17"}</TableCell>
+              </TableRow>
+
             </TableBody>
           </Table>
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
