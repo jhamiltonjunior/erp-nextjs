@@ -6,9 +6,6 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
 }
 
 export const moneyMask = (value) => {
-  console.log(value)
-  // return
-
   if (!value) return value
   const onlyDigits = value
     .split("")
@@ -17,9 +14,6 @@ export const moneyMask = (value) => {
     .padStart(3, "0")
   const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2)
   value = maskCurrency(digitsFloat)
-
-  console.log(value)
-
   return value
 }
 

@@ -32,7 +32,11 @@ const SelectCustom = (props) => {
       isCreatable ? (
         <ComboboxDemo id={props.id} classNameContent={props.classNameContent} placeholder={props.placeholder} options={props.options} />
       ) : (
-        <SelectUI id={props.id} className={`border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${props.className}`}>
+        <SelectUI
+          onValueChange={(value) => {
+            props?.setSelectedOption(value)
+          }}
+          id={props.id} className={`border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${props.className}`}>
           <SelectTrigger
             className={`w-[160px] rounded-lg sm:ml-auto ${props.className}`}
             aria-label={props.placeholder}
