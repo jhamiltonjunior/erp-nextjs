@@ -2,31 +2,13 @@
 
 import Filter from "@/component/Filter";
 import React, {useEffect, useState} from "react";
-import CardVacancy from "@/component/Vacancy/CardVacancy";
 import NormalButton from "@/component/Element/NormalButton";
-import {
-  faPlus,
-  faFilter,
-  faPenToSquare,
-  faTrashCan,
-  faGripLines,
-  faUserGroup,
-  faCircle, faArrowUpRightFromSquare, faCubes
-} from "@fortawesome/free-solid-svg-icons";
+import {faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";
-import HandleVacancy from "@/component/Vacancy/Handle";
-import Calendar from "@/component/Calendar";
-import HandleProcessSelective from "@/component/Selection/NewSelection";
-import Card from "@/component/Simple/Card";
-import {AccordionItem} from "@/component/Accordion";
-import {CheckboxIcon} from "@radix-ui/react-icons";
 import {Checkbox} from "@/component/ui/checkbox";
-import HoverCardShadcn, {HoverCard, HoverCardContent, HoverCardTrigger} from "@/component/ui/hover-card";
-import Line from "@/component/Simple/Line";
 import HandleProduct from "@/component/Stock/HandleProduct";
-import Image from "next/image";
-import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "@/component/ui/table";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/component/ui/table";
 import {
   Pagination,
   PaginationContent, PaginationEllipsis,
@@ -34,14 +16,9 @@ import {
   PaginationLink, PaginationNext,
   PaginationPrevious
 } from "@/component/ui/pagination";
-import Link from "next/link";
 import {moneyMask} from "@/lib/moneyMask";
 import SelectCustom from "@/component/Element/SelectCustom";
-// import { Metadata } from 'next'
-//
-// export const metadata = {
-//   title: 'Dashboard'
-// }
+
 const lowStatusClass = "bg-red-200 text-red-600"
 const mediumStatusClass = "bg-orange-100 text-orange-700"
 const highStatusClass = "bg-blue-100 text-blue-600"
@@ -683,12 +660,6 @@ export default function EntriesAndExitsPage() {
             text={<p>Filtrar</p>}
             onClick={() => setVisibleFilter(!visibleFilter)}/>
 
-          {/*<NormalButton*/}
-
-          {/*  className={"flex items-center gap-2 bg-[var(--principal-color)] p-2 text-white px-2 max-h-[33px]"}*/}
-          {/*  icon={<FontAwesomeIcon icon={faPlus} />}*/}
-          {/*  text={<p>Novo Produto</p>}*/}
-          {/*  onClick={() => setVisibleModalHandleVacancy(!visibleModalHandleVacancy)}/>*/}
         </section>
         {
           visibleFilter && (
@@ -752,44 +723,44 @@ export default function EntriesAndExitsPage() {
 
 function TableComponent(thead, data, type = "") {
   return (
-    <Table className={"bg-white"}>
-      <TableHeader className={"sticky z-10 top-0 bg-white"}>
-        <TableRow>
-          <TableHead> </TableHead>
+      <Table className={"bg-white"}>
+        <TableHeader className={"sticky z-10 top-0 bg-white"}>
+          <TableRow>
+            <TableHead> </TableHead>
+            {
+              thead.map((item, i) => (
+                <TableHead key={i} className={"text-center"}>{item.text}</TableHead>
+              ))
+            }
+          </TableRow>
+        </TableHeader>
+        <TableBody>
           {
-            thead.map((item, i) => (
-              <TableHead key={i} className={"text-center"}>{item.text}</TableHead>
+            data.map((item, i) => (
+              <TableRow key={i} className={i % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
+                <TableCell className="font-medium">
+                  <Checkbox/>
+                </TableCell>
+                <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
+                {
+                  type === "all" && (
+                    <TableCell className={
+                      item.type === "Entrada" ?
+                        lowStatusClass :
+                        highStatusClass
+                    }>{item.type}</TableCell>
+                  )
+                }
+                <TableCell className="font-medium">{item.data}</TableCell> {/* Produto */}
+                <TableCell>{item.quantidade}</TableCell> {/* Entrada */}
+                <TableCell>{moneyMask(item.unitario)}</TableCell> {/* Estoque Mínimo */}
+                <TableCell className={"text-center"}>
+                  {moneyMask(item.total)}
+                </TableCell>
+              </TableRow>
             ))
           }
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {
-          data.map((item, i) => (
-            <TableRow key={i} className={i % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
-              <TableCell className="font-medium">
-                <Checkbox />
-              </TableCell>
-              <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
-              {
-                type === "all" && (
-                  <TableCell className={
-                    item.type === "Entrada" ?
-                      lowStatusClass :
-                      highStatusClass
-                  }>{item.type}</TableCell>
-                )
-              }
-              <TableCell className="font-medium">{item.data}</TableCell> {/* Produto */}
-              <TableCell>{item.quantidade}</TableCell> {/* Entrada */}
-              <TableCell>{moneyMask(item.unitario)}</TableCell> {/* Estoque Mínimo */}
-              <TableCell className={"text-center"}>
-                {moneyMask(item.total)}
-              </TableCell>
-            </TableRow>
-          ))
-        }
-      </TableBody>
-    </Table>
+        </TableBody>
+      </Table>
   )
 }
