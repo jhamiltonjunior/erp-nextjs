@@ -635,6 +635,14 @@ export default function EntriesAndExitsPage() {
   })
 
   const all = [{
+    key: "Receitas",
+    statusColor: highStatusClass,
+    data: entries
+  },{
+    key: "Despesas",
+    statusColor: lowStatusClass,
+    data: entries
+  },{
     key: "Cielo",
     statusColor: highStatusClass,
     data: entries
