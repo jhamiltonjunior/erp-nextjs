@@ -4,7 +4,6 @@ export default function HamburguerToXButton(props) {
 
   const className = props.classNameSpan ? `${props.classNameSpan}` : "span";
 
-  console.log(className, 'clas')
   return (
     <button
       className="w-10 h-10 focus:outline-none modal-toggle"

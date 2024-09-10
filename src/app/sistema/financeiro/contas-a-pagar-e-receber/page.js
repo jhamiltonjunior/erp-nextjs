@@ -1,7 +1,7 @@
 "use client"
 
 import Filter from "@/component/Filter";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import NormalButton from "@/component/Element/NormalButton";
 import {faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -18,6 +18,13 @@ import {
 } from "@/component/ui/pagination";
 import {moneyMask} from "@/lib/moneyMask";
 import SelectCustom from "@/component/Element/SelectCustom";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/component/ui/collapsible"
+import './styles.css';
+import {AnimatePresence, motion} from "framer-motion";
 
 const lowStatusClass = "bg-red-200 text-red-600"
 const mediumStatusClass = "bg-orange-100 text-orange-700"
@@ -28,10 +35,11 @@ export default function EntriesAndExitsPage() {
   const [visibleModalHandleVacancy, setVisibleModalHandleVacancy] = useState(false);
   const [table, setTable] = useState('entrada');
 
+
   const data = [
     {
       n: 2,
-      text: "Arroz",
+      text: "Banco do Brasil",
       entrada: 429,
       saida: 303,
       estoqueMinimo: 150,
@@ -53,7 +61,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 10,
-      text: "Café",
+      text: "Cielo",
       entrada: 500,
       saida: 300,
       estoqueMinimo: 100,
@@ -75,7 +83,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 5,
-      text: "Feijão",
+      text: "Cliente A",
       entrada: 600,
       saida: 400,
       estoqueMinimo: 200,
@@ -97,7 +105,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Açúcar",
+      text: "Cliente B",
       entrada: 300,
       saida: 200,
       estoqueMinimo: 120,
@@ -119,7 +127,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Óleo",
+      text: "Cliente C",
       entrada: 200,
       saida: 100,
       estoqueMinimo: 80,
@@ -141,7 +149,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 2,
-      text: "Arroz",
+      text: "Banco do Brasil",
       entrada: 429,
       saida: 303,
       estoqueMinimo: 150,
@@ -163,7 +171,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 10,
-      text: "Café",
+      text: "Cielo",
       entrada: 500,
       saida: 300,
       estoqueMinimo: 100,
@@ -185,7 +193,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 5,
-      text: "Feijão",
+      text: "Cliente A",
       entrada: 600,
       saida: 400,
       estoqueMinimo: 200,
@@ -207,7 +215,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Açúcar",
+      text: "Cliente B",
       entrada: 300,
       saida: 200,
       estoqueMinimo: 120,
@@ -229,7 +237,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Óleo",
+      text: "Cliente C",
       entrada: 200,
       saida: 100,
       estoqueMinimo: 80,
@@ -251,7 +259,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 2,
-      text: "Arroz",
+      text: "Banco do Brasil",
       entrada: 429,
       saida: 303,
       estoqueMinimo: 150,
@@ -273,7 +281,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 10,
-      text: "Café",
+      text: "Cielo",
       entrada: 500,
       saida: 300,
       estoqueMinimo: 100,
@@ -295,7 +303,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 5,
-      text: "Feijão",
+      text: "Cliente A",
       entrada: 600,
       saida: 400,
       estoqueMinimo: 200,
@@ -317,7 +325,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Açúcar",
+      text: "Cliente B",
       entrada: 300,
       saida: 200,
       estoqueMinimo: 120,
@@ -339,7 +347,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Óleo",
+      text: "Cliente C",
       entrada: 200,
       saida: 100,
       estoqueMinimo: 80,
@@ -361,7 +369,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 2,
-      text: "Arroz",
+      text: "Banco do Brasil",
       entrada: 429,
       saida: 303,
       estoqueMinimo: 150,
@@ -383,7 +391,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 10,
-      text: "Café",
+      text: "Cielo",
       entrada: 500,
       saida: 300,
       estoqueMinimo: 100,
@@ -405,7 +413,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 5,
-      text: "Feijão",
+      text: "Cliente A",
       entrada: 600,
       saida: 400,
       estoqueMinimo: 200,
@@ -427,7 +435,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Açúcar",
+      text: "Cliente B",
       entrada: 300,
       saida: 200,
       estoqueMinimo: 120,
@@ -449,7 +457,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Óleo",
+      text: "Cliente C",
       entrada: 200,
       saida: 100,
       estoqueMinimo: 80,
@@ -471,7 +479,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 2,
-      text: "Arroz",
+      text: "Banco do Brasil",
       entrada: 429,
       saida: 303,
       estoqueMinimo: 150,
@@ -493,7 +501,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 10,
-      text: "Café",
+      text: "Cielo",
       entrada: 500,
       saida: 300,
       estoqueMinimo: 100,
@@ -515,7 +523,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 5,
-      text: "Feijão",
+      text: "Cliente A",
       entrada: 600,
       saida: 400,
       estoqueMinimo: 200,
@@ -537,7 +545,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Açúcar",
+      text: "Cliente B",
       entrada: 300,
       saida: 200,
       estoqueMinimo: 120,
@@ -559,7 +567,7 @@ export default function EntriesAndExitsPage() {
     },
     {
       n: 1,
-      text: "Óleo",
+      text: "Cliente C",
       entrada: 200,
       saida: 100,
       estoqueMinimo: 80,
@@ -607,32 +615,40 @@ export default function EntriesAndExitsPage() {
   const entries = data.map((value) => {
     return {
       text: value.text,
-      type: "Entrada",
-      data: value.dataEntrada,
-      quantidade: value.entrada,
-      unitario: value.custoUnitario,
-      total: value.custoTotal
+      type: "R$ 2.334,00",
+      data: "R$ 3.304,00",
+      quantidade: "R$ 6.234,00",
+      unitario: "R$ 4.334,00",
+      total: "R$ 2.334,00"
     }
   })
 
   const exits = data.map((value) => {
     return {
       text: value.text,
-      type: "Saida",
-      data: value.dataVenda,
-      quantidade: value.saida,
-      unitario: value.precoUnitario,
-      total: value.precoTotal
+      type: "R$ 2.334,00",
+      data: "R$ 3.304,00",
+      quantidade: "R$ 6.234,00",
+      unitario: "R$ 4.334,00",
+      total: "R$ 2.334,00"
     }
   })
 
-  const all = [...entries, ...exits];
+  const all = [{
+    key: "Cielo",
+    statusColor: highStatusClass,
+    data: entries
+  }, {
+    key: "Emprestimo Pessoal",
+    statusColor: lowStatusClass,
+    data: exits
+  }];
 
 
   const optionsTables = [
+    { value: 'todas', label: 'Todas' },
     { value: 'entrada', label: 'Entrada' },
     { value: 'saida', label: 'Saida' },
-    { value: 'todas', label: 'Todas' },
   ];
 
   // aqui
@@ -669,9 +685,10 @@ export default function EntriesAndExitsPage() {
           setIsOpen={setVisibleModalHandleVacancy}/>
 
         <section className={"grid gap-4 w-full grid-cols-1 overflow-y-auto max-h-[88vh] h-[88vh] relative"}>
-          {table === 'entrada' && TableComponent(tableHeadsEntry, entries)}
-          {table === 'saida' && TableComponent(tableHeadsExits, exits)}
-          {table === 'todas' && TableComponent(tableHeadsAll, all, "all")}
+          {/*{table === 'entrada' && TableComponent(tableHeadsEntry, entries)}*/}
+          {/*{table === 'saida' && TableComponent(tableHeadsExits, exits)}*/}
+          {/*{table === 'todas' && TableComponent(tableHeadsAll, all, "all")}*/}
+          {TableComponent(tableHeadsAll, all, "all")}
 
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
             <PaginationContent className="flex items-center space-x-1">
@@ -718,45 +735,90 @@ export default function EntriesAndExitsPage() {
 }
 
 function TableComponent(thead, data, type = "") {
+  const [openRow, setOpenRow] = useState(null); // Guarda o índice da linha aberta
+
+  const toggleRow = (index) => {
+    setOpenRow(openRow === index ? null : index); // Alterna entre abrir e fechar a linha
+  };
+
+  const year = new Date().getFullYear();
+
+  const monthsHead = [
+    "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+  ]
+
+  const totalMonthsCielo = [
+    "R$ 32.150,75", "R$ 28.340,20", "R$ 45.100,60", "R$ 19.500,00",
+    "R$ 12.750,90", "R$ 50.000,00", "R$ 23.400,80", "R$ 37.600,25",
+    "R$ 29.999,99", "R$ 15.850,50", "R$ 40.500,10", "R$ 22.120,00"
+  ];
+
+
   return (
-      <Table className={"bg-white"}>
-        <TableHeader className={"sticky z-10 top-0 bg-white"}>
-          <TableRow>
-            <TableHead> </TableHead>
-            {
-              thead.map((item, i) => (
-                <TableHead key={i} className={"text-center"}>{item.text}</TableHead>
-              ))
-            }
-          </TableRow>
-        </TableHeader>
-        <TableBody>
+    <Table>
+      <TableHeader className="sticky z-10 top-0 bg-white">
+        <TableRow>
+          <TableHead className="w-[100px] text-center">DRE {year}</TableHead>
           {
-            data.map((item, i) => (
-              <TableRow key={i} className={i % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
-                <TableCell className="font-medium">
-                  <Checkbox/>
-                </TableCell>
-                <TableCell className="font-medium">{item.text}</TableCell> {/* Produto */}
-                {
-                  type === "all" && (
-                    <TableCell className={
-                      item.type === "Entrada" ?
-                        lowStatusClass :
-                        highStatusClass
-                    }>{item.type}</TableCell>
-                  )
-                }
-                <TableCell className="font-medium">{item.data}</TableCell> {/* Produto */}
-                <TableCell>{item.quantidade}</TableCell> {/* Entrada */}
-                <TableCell>{moneyMask(item.unitario)}</TableCell> {/* Estoque Mínimo */}
-                <TableCell className={"text-center"}>
-                  {moneyMask(item.total)}
-                </TableCell>
-              </TableRow>
+            monthsHead.map((month, i) => (
+              <TableHead className="min-w-[150px] text-center" key={i}>{month}</TableHead>
             ))
           }
-        </TableBody>
-      </Table>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow className={"hover:bg-[var(--default-bg-dark)] bg-[var(--default-bg-dark)]"}>
+          <TableCell className="text-transparent" colspan={"100%"}></TableCell>
+        </TableRow>
+        {data.map((invoice, i) => (
+          <React.Fragment key={invoice.key}>
+            <TableRow
+              className={`cursor-pointer bg-gray-500 sticky top-10 z-[${i + 1}]  ${invoice.statusColor}`}
+              onClick={() => toggleRow(i)}
+            >
+              <TableCell className="font-medium">{invoice.key}</TableCell>
+              {
+                totalMonthsCielo.map((value, i) => (
+                  <TableCell key={i} className="text-center table-cel">{value}</TableCell>
+                ))
+              }
+            </TableRow>
+
+            <AnimatePresence>
+              {openRow === i && invoice.data.map((item) => (
+                <motion.tr
+                  className={"hover:bg-[var(--default-bg-dark)]"}
+                  key={item.id}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto', maxHeight: "400px" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <TableCell>{item.text}</TableCell>
+                  <TableCell>{item.data}</TableCell>
+                  <TableCell>{item.type}</TableCell>
+                  <TableCell>{item.quantidade}</TableCell>
+                  <TableCell>{item.unitario}</TableCell>
+                  <TableCell>{item.total}</TableCell>
+                  <TableCell>{item.unitario}</TableCell>
+                  <TableCell>{item.type}</TableCell>
+                  <TableCell>{item.quantidade}</TableCell>
+                  <TableCell>{item.total}</TableCell>
+                  <TableCell>{item.data}</TableCell>
+                  <TableCell>{item.total}</TableCell>
+                  <TableCell>{item.data}</TableCell>
+                </motion.tr>
+              ))}
+            </AnimatePresence>
+
+            <TableRow className={"hover:bg-[var(--default-bg-dark)] bg-[var(--default-bg-dark)]"}>
+              <TableCell className="text-transparent" colspan={"100%"}></TableCell>
+            </TableRow>
+
+
+          </React.Fragment>
+        ))}
+      </TableBody>
+    </Table>
   )
 }

@@ -102,10 +102,10 @@ export default function Calendar({className, eventClick}) {
 
         eventClick={function(info) {
           eventClick()
-          console.log('Clicked on: ' + info.dateStr);
-          console.log('Clicked on event: ' + info.event.title);
-
-          console.log(info)
+          // console.log('Clicked on: ' + info.dateStr);
+          // console.log('Clicked on event: ' + info.event.title);
+          //
+          // console.log(info)
         }}
         dayMaxEvents={true}
         allDaySlot={false}

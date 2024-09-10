@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a360120d-78e6-4cbb-8a4d-fd145362492a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sistema/estoque/entrada-e-saida/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sistema/estoque/entrada-e-saida/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Accordion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Accordion/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Calendar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Element/HamburguerToXButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Element/HamburguerToXButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Element/SelectCustom/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,22 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.15.1",
-    "javascript.nodejs.core.library.typings.version": "20.15.0",
-    "last_opened_file_path": "/home/is_me/.app/tela-pagamento-balcao",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "/home/is_me/Aplicativos/WebStorm-241.18034.50/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.15.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/is_me/.app/tela-pagamento-balcao&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/is_me/Aplicativos/WebStorm-241.18034.50/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/sistema/estoque" />
@@ -97,6 +105,10 @@
       <workItem from="1725579062941" duration="7675000" />
       <workItem from="1725665051795" duration="9684000" />
       <workItem from="1725710803278" duration="789000" />
+      <workItem from="1725744823529" duration="11184000" />
+      <workItem from="1725794405708" duration="1323000" />
+      <workItem from="1725914894156" duration="13133000" />
+      <workItem from="1725929521632" duration="1025000" />
     </task>
     <servers />
   </component>

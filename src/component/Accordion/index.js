@@ -75,8 +75,8 @@ const Accordion = (props) => {
   ];
 
   const financeiro = [
-    "Planejamento",
-    "Gestão dos recursos",
+    "Painel",
+    "Contas a Pagar e Receber",
     "Controle",
     "Tesouraria",
     "Gestão dos impostos",
@@ -84,8 +84,8 @@ const Accordion = (props) => {
   ];
 
   const financeiroLink = [
-    "Planejamento",
-    "Gestão dos recursos",
+    "",
+    "contas-a-pagar-e-receber",
     "Controle",
     "Tesouraria",
     "Gestão dos impostos",

@@ -27,7 +27,6 @@ import {
 const SelectCustom = (props) => {
   const [value, setValue] = useState("");
   const isCreatable = props?.isCreatable
-  console.log(props)
 
   return (
       isCreatable ? (
