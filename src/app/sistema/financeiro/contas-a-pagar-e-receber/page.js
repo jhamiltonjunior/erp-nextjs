@@ -25,6 +25,7 @@ import {
 } from "@/component/ui/collapsible"
 import './styles.css';
 import {AnimatePresence, motion} from "framer-motion";
+import HoverCardShadcn from "@/component/ui/hover-card";
 
 const lowStatusClass = "bg-red-200 text-red-600"
 const mediumStatusClass = "bg-orange-100 text-orange-700"
@@ -588,33 +589,14 @@ export default function EntriesAndExitsPage() {
       dataVenda: "10/10/2021",
     },
   ];
-  const tableHeadsEntry = [
-    { text: "Produtos" },
-    { text: "Data" },
-    { text: "Quantidade" },
-    { text: "Custo Unitario" },
-    { text: "Custo Total" }
-  ];
-  const tableHeadsExits = [
-    { text: "Produtos" },
-    { text: "Data" },
-    { text: "Quantidade" },
-    { text: "Preco Unitario" },
-    { text: "Preço Total" }
-  ];
-  const tableHeadsAll = [
-    { text: "Produtos" },
-    { text: "Data" },
-    { text: "Tipo" },
-    { text: "Quantidade" },
-    { text: "ValorUnitario" },
-    { text: "Valor Total" },
-  ];
-
 
   const entries = data.map((value) => {
     return {
-      text: value.text,
+      text: (
+        <HoverCardShadcn hoverContent={value.text}>
+          {value.text}
+        </HoverCardShadcn>
+      ),
       type: "R$ 2.334,00",
       data: "R$ 3.304,00",
       quantidade: "R$ 6.234,00",
@@ -625,7 +607,11 @@ export default function EntriesAndExitsPage() {
 
   const exits = data.map((value) => {
     return {
-      text: value.text,
+      text: (
+      <HoverCardShadcn hoverContent={value.text}>
+        {value.text}
+      </HoverCardShadcn>
+    ),
       type: "R$ 2.334,00",
       data: "R$ 3.304,00",
       quantidade: "R$ 6.234,00",
@@ -696,7 +682,7 @@ export default function EntriesAndExitsPage() {
           {/*{table === 'entrada' && TableComponent(tableHeadsEntry, entries)}*/}
           {/*{table === 'saida' && TableComponent(tableHeadsExits, exits)}*/}
           {/*{table === 'todas' && TableComponent(tableHeadsAll, all, "all")}*/}
-          {TableComponent(tableHeadsAll, all, "all")}
+          {TableComponent(all)}
 
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
             <PaginationContent className="flex items-center space-x-1">
@@ -742,7 +728,7 @@ export default function EntriesAndExitsPage() {
   );
 }
 
-function TableComponent(thead, data, type = "") {
+function TableComponent(data) {
   const [openRow, setOpenRow] = useState(null); // Guarda o índice da linha aberta
 
   const toggleRow = (index) => {
@@ -781,7 +767,7 @@ function TableComponent(thead, data, type = "") {
         {data.map((invoice, i) => (
           <React.Fragment key={invoice.key}>
             <TableRow
-              className={`cursor-pointer bg-gray-500 sticky top-10 z-[${i + 1}]  ${invoice.statusColor}`}
+              className={`cursor-pointer bg-gray-500 sticky top-10 z-[${i + 1}] hover:bg-white  ${invoice.statusColor}`}
               onClick={() => toggleRow(i)}
             >
               <TableCell className="font-medium">{invoice.key}</TableCell>
@@ -793,7 +779,7 @@ function TableComponent(thead, data, type = "") {
             </TableRow>
 
             <AnimatePresence>
-              {openRow === i && invoice.data.map((item) => (
+              {openRow === i && invoice.data.map((item, j) => (
                 <motion.tr
                   className={"hover:bg-[var(--default-bg-dark)]"}
                   key={item.id}
@@ -802,19 +788,19 @@ function TableComponent(thead, data, type = "") {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <TableCell>{item.text}</TableCell>
-                  <TableCell>{item.data}</TableCell>
-                  <TableCell>{item.type}</TableCell>
-                  <TableCell>{item.quantidade}</TableCell>
-                  <TableCell>{item.unitario}</TableCell>
-                  <TableCell>{item.total}</TableCell>
-                  <TableCell>{item.unitario}</TableCell>
-                  <TableCell>{item.type}</TableCell>
-                  <TableCell>{item.quantidade}</TableCell>
-                  <TableCell>{item.total}</TableCell>
-                  <TableCell>{item.data}</TableCell>
-                  <TableCell>{item.total}</TableCell>
-                  <TableCell>{item.data}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.text}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.data}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.type}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.quantidade}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.unitario}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.total}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.unitario}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.type}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.quantidade}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.total}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.data}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.total}</TableCell>
+                  <TableCell className={j % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>{item.data}</TableCell>
                 </motion.tr>
               ))}
             </AnimatePresence>
