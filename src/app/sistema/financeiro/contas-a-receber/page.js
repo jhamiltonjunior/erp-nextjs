@@ -3,7 +3,7 @@
 import Filter from "@/component/Filter";
 import React, {useEffect, useRef, useState} from "react";
 import NormalButton from "@/component/Element/NormalButton";
-import {faFilter} from "@fortawesome/free-solid-svg-icons";
+import {faChevronRight, faFilter} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SimpleModal from "@/component/SimpleModal";
 import {Checkbox} from "@/component/ui/checkbox";
@@ -26,6 +26,7 @@ import {
 import './styles.css';
 import {AnimatePresence, motion} from "framer-motion";
 import HoverCardShadcn from "@/component/ui/hover-card";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/component/ui/accordion";
 
 const lowStatusClass = "bg-red-200 text-red-600"
 const mediumStatusClass = "bg-orange-100 text-orange-700"
@@ -181,6 +182,15 @@ export default function EntriesAndExitsPage() {
     { value: 'saida', label: 'Saida' },
   ];
 
+  const entries = [
+    "Todos",
+    "Vendas",
+    "Serviços",
+    "Boletos",
+    "Cartão de Crédito",
+    "Outros",
+  ]
+
   return (
     <main className="flex w-full min-h-screen text-center justify-center bg-[var(--default-bg-dark)] p-4">
       <section className={"max-w-full w-[87rem] gap-6 flex flex-col items-center"}>
@@ -212,9 +222,18 @@ export default function EntriesAndExitsPage() {
           setIsOpen={setVisibleModalHandleVacancy}/>
 
         <section className={"grid gap-4 w-full grid-cols-1 overflow-y-auto max-h-[88vh] h-[88vh] relative"}>
-          {TableComponent(data)}
-
-          <h1>Fazer uma sessao aqui: Por tipo</h1>
+          <Accordion type="multiple" collapsible className="w-full gap-2" defaultValue={["item-0"]}>
+              {
+                entries.map((entrie, i) => (
+                    <AccordionItem key={i} value={`item-${i}`} className={"bg-white overflow-y-auto max-h-[88vh]"}>
+                      <AccordionTrigger className={"p-4"}>{entrie}</AccordionTrigger>
+                      <AccordionContent className={"p-4"}>
+                        {TableComponent(data)}
+                      </AccordionContent>
+                    </AccordionItem>
+                ))
+              }
+          </Accordion>
 
           <Pagination className="flex justify-center items-end space-x-2 sticky bottom-0">
             <PaginationContent className="flex items-center space-x-1">
