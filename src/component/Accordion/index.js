@@ -78,6 +78,7 @@ const Accordion = (props) => {
     "Painel",
     "Demonstração de Resultados do Exercício (DRE)",
     "Contas a Receber",
+    "Contas a Pagar",
     "Tesouraria",
     "Gestão dos impostos",
     "Gestão de fluxo de caixa"
@@ -87,6 +88,7 @@ const Accordion = (props) => {
     "",
     "demonstracao-de-resultados",
     "contas-a-receber",
+    "contas-a-pagar",
     "Tesouraria",
     "Gestão dos impostos",
     "Gestão de fluxo de caixa"

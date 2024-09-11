@@ -1,0 +1,49 @@
+.collapsible-content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden;
+    transform: scaleY(0);
+    display: table-row;
+    transform-origin: top;
+    transition: height 0.4s ease, display 0.4s ease, opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
+}
+
+.collapsible-content.open {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transform: scaleY(1);
+    max-height: 300px;
+    transition: height 0.4s ease, opacity 0.4s ease, transform 0.4s ease, visibility 0s;
+}
+
+.table-cell {
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Esconde qualquer texto que transborde */
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for muito longo */
+    padding: 8px; /* Adiciona um espaço interno */
+    border: 1px solid #ddd; /* Borda da célula */
+}
+
+.CollapsibleContent[data-state="open"] {
+    animation: slideDown 400ms ease-out;
+}
+.CollapsibleContent[data-state="closed"] {
+    animation: slideUp 400ms ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 10%;
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 10%;
+        transform: translateY(-1rem);
+    }
+}
