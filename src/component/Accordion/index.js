@@ -76,8 +76,8 @@ const Accordion = (props) => {
 
   const financeiro = [
     "Painel",
-    "Contas a Pagar e Receber",
-    "Controle",
+    "Demonstração de Resultados do Exercício (DRE)",
+    "Contas a Receber",
     "Tesouraria",
     "Gestão dos impostos",
     "Gestão de fluxo de caixa"
@@ -85,8 +85,8 @@ const Accordion = (props) => {
 
   const financeiroLink = [
     "",
-    "contas-a-pagar-e-receber",
-    "Controle",
+    "demonstracao-de-resultados",
+    "contas-a-receber",
     "Tesouraria",
     "Gestão dos impostos",
     "Gestão de fluxo de caixa"
