@@ -79,9 +79,9 @@ const Accordion = (props) => {
     "Demonstração de Resultados do Exercício (DRE)",
     "Contas a Receber",
     "Contas a Pagar",
-    "Tesouraria",
-    "Gestão dos impostos",
-    "Gestão de fluxo de caixa"
+    // "Tesouraria",
+    // "Gestão dos impostos",
+    // "Gestão de fluxo de caixa"
   ];
 
   const financeiroLink = [

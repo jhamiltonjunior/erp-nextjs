@@ -10,6 +10,11 @@ const AuthForm = () => {
     setIsRegistering(!isRegistering);
   };
 
+  function submit(e) {
+    e.preventDefault()
+    console.log('submit')
+  }
+
   const classNameInput = "w-full px-4 py-2 mb-6 handle-user-not-logged-input"
 
   return (
@@ -18,7 +23,7 @@ const AuthForm = () => {
         <h2 className="text-2xl font-bol mb-8 text-center">
           {isRegistering ? 'Registrar-se' : 'Login'}
         </h2>
-        <form>
+        <form onSubmit={submit}>
           {isRegistering && (
             <div className={"mb-4"}>
               <label className="block text-2xl text-gray-700 mb-6">Nome</label>
@@ -56,7 +61,7 @@ const AuthForm = () => {
             </div>
           )}
           <button
-            type="button"
+            type="submit"
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
           >
             {isRegistering ? 'Registrar-se' : 'Entrar'}
